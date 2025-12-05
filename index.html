@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+  <h1>Private Portfolio</h1>
+  <p>パスワードを入力してください。</p>
+
+  <input type="password" id="pw" />
+  <button onclick="login()">Enter</button>
+
+  <script>
+    const PASSWORD = "portofolio2025";
+
+    function login() {
+      const input = document.getElementById("pw").value;
+      if (input === PASSWORD) {
+        sessionStorage.setItem("portfolioAuth", "ok");
+        window.location.href = "project/home.html";
+      } else {
+        alert("パスワードが違います");
+      }
+    }
+  </script>
+</body>
+</html>

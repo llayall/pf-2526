@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enter Password</title>
+  <!-- 検索避け（目隠し用）-->
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 520px; margin: 12vh auto; padding: 24px; line-height: 1.6; }
+    input, button { font-size: 16px; padding: 10px; }
+    .row { display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Password</h1>
+  <p>パスワードを入力してください。</p>
+  <div class="row">
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password" />
+    <button id="go">Enter</button>
+  </div>
+  <p id="msg" style="color:#c00;"></p>
+
+  <script>
+    // ==== 必要に応じて変更 ====
+    const PASSWORD = "your-password"; // ← 任意の文字列に変更
+    // ここはあなたの公開パス（末尾スラッシュ注意）
+    const BASE = "/portfolio2025/project/";
+    const AFTER_LOGIN = BASE + "home.html";
+    const KEY = "portfolio2025_auth_ok";
+    // ===========================
+
+    // 既に認証済みならすぐ遷移
+    if (localStorage.getItem(KEY) === "1") {
+      location.replace(AFTER_LOGIN);
+    }
+
+    document.getElementById("go").addEventListener("click", () => {
+      const v = document.getElementById("pw").value;
+      if (v === PASSWORD) {
+        localStorage.setItem(KEY, "1");
+        location.href = AFTER_LOGIN;
+      } else {
+        document.getElementById("msg").textContent = "パスワードが違います。";
+      }
+    });
+    document.getElementById("pw").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("go").click();
+    });
+  </script>
+</body>
+</html>
