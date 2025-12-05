@@ -1,4 +1,8 @@
-project/node_modules/
 node_modules/
+project/node_modules/
 dist/
+build/
+.out/
+.next/
+.cache/
 .DS_Store
