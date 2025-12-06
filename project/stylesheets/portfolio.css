@@ -20,8 +20,10 @@ body {
 }
 
 .section {
+  max-width: 680px;
+  padding: 2em 12vw 2em;
+  margin: auto;
   text-align: left;
-  padding: 2em 12vw 5em;
 }
 .section h1, .section h2, .section h3, .section h4 {
   text-align: center;
@@ -57,6 +59,8 @@ p, td {
 
 .top_img img {
   width: 100%;
+  max-height: 500px;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 800px) {
@@ -76,13 +80,13 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
-  line-height: 40px;
-  color: #999;
+  max-width: 80%;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 36px;
   padding: 0.5em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  width: 100%;
+  margin: 2em auto;
+  border-radius: 33px;
 }
 
 h4 {
@@ -90,16 +94,45 @@ h4 {
   line-height: 1.5em;
   width: 100%;
   text-align: center;
-  margin: 100px auto 50px;
+  /* margin: 100px auto 50px; */
+}
+
+h4.itemTitle {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.itemList dl div {
+  display: flex;
+  margin-bottom: 20px;
+}
+.itemList img {
+  max-width: 260px;
+}
+.itemList dl dd {
+  padding: 4px 20px;
+}
+.itemList dl strong {
+  font-size: 18px;
+}
+.itemList dl p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
 }
 
 a {
   color: #333;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #666;
   cursor: pointer;
+}
+
+.work_list a {
+  color: #333;
 }
 
 .work_list ul {
@@ -136,23 +169,35 @@ a:hover {
   text-align: left;
   color: #999;
 }
+.work_list a {
+  text-decoration: none;
+}
+.work_list a .work_name {
+  text-decoration: underline;
+}
+.work_list a:hover .work_name {
+  text-decoration: none;
+}
 @media screen and (max-width: 800px) {
   .work_list ul li {
     width: 100%;
   }
 }
 
-.work_image_style, .work_sprint, .work_pitajob .work_image, .work_jms .work_image, .work_cocoal .work_image,
-.work_smilezemi .work_image, .work_serverview .work_image, .work_medical .work_image, .work_traffic .work_image {
+.work_image {
   width: 100%;
 }
-.work_image_style:hover img, .work_sprint:hover img, .work_pitajob .work_image:hover img, .work_jms .work_image:hover img, .work_cocoal .work_image:hover img,
-.work_smilezemi .work_image:hover img, .work_serverview .work_image:hover img, .work_medical .work_image:hover img, .work_traffic .work_image:hover img {
+.work_image img {
+  transition: transform .6s ease;
+}
+.work_image:hover img {
   opacity: 1;
   -webkit-animation: flash 2s;
   animation: flash 2s;
+  transform: scale(1.05);
   cursor: pointer;
 }
+
 @-webkit-keyframes flash {
   0% {
     opacity: 1;
@@ -342,7 +387,7 @@ a:hover {
   float: right;
 }
 .biography .bioTbl_job {
-  font-size: 20px;
+  font-size: 22px;
   color: #000;
 }
 .biography .bioTbl_company {
@@ -797,16 +842,13 @@ h1 p {
   font-weight: bold;
   vertical-align: top;
   margin-right: 1em;
-  color: rgba(0, 0, 0, 0.3);
+  /* color: rgba(0, 0, 0, 0.3); */
+  /* color: rgba(0, 0, 0, 0.3); */
   padding: 0.3em;
 }
 .summary dl div dd {
   flex: 5;
   padding: 0.1em;
-}
-.summary a {
-  color: #333;
-  text-decoration: underline;
 }
 .summary p:first-child {
   font-weight: bold;
@@ -1329,13 +1371,19 @@ input[type="radio"] {
 }
 
 .product_text {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 660px;
   margin: 0 auto 2em;
   color: rgba(0, 0, 0, 0.5);
 }
 .product_text p {
   text-align: left;
   margin: auto;
+}
+.product_text ul {
+  max-width: 660px;
+  padding-left: 20px;
+  list-style: disc;
 }
 
 .product_img {
