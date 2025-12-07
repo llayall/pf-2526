@@ -4,7 +4,7 @@ body {
   background: #e7ecec;
   color: rgba(0, 0, 0, 0.7);
   font-family: 'Hiragino Sans', Meiryo, sans-serif;
-  font-size: 20px;
+  /* font-size: 20px; */
   line-height: 1.6em;
   text-align: center;
   margin: auto;
@@ -39,9 +39,3 @@ button {
   text-decoration: none;
   font-size: 1em;
 }
-
-/* @media screen and (max-width: 500px) {
-  body {
-    font-size: 40px;
-  }
-} */
