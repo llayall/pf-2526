@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <meta name="robots" content="noindex, nofollow">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 <body>
-  <h1>Private Portfolio</h1>
-  <p>パスワードを入力してください。</p>
-
-  <input type="password" id="pw" />
-  <button onclick="login()">Enter</button>
+  <div class="container">
+    <div class="form">
+      <h1>Private Portfolio</h1>
+      <p>パスワードを入力してください。</p>
+      <input type="password" id="pw" />
+      <button onclick="login()">Enter</button>
+    </div>
+  </div>
 
   <script>
-    const PASSWORD = "portofolio2025";
+    const PASSWORD = "pf2025";
 
     function login() {
       const input = document.getElementById("pw").value;
