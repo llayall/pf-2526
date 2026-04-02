@@ -1072,6 +1072,9 @@ input[type="radio"] {
   color: #aaa;
   padding: 2em;
 }
+.footer a {
+  color: #aaa;
+}
 .footer span {
   font-size: 24px;
   vertical-align: bottom;
@@ -2257,7 +2260,9 @@ input[type="radio"] {
 /* ===== ABOUT SIMPLE COVER ===== */
 .about_cover_simple {
   width: 100%;
-  padding: 100px 32px 12px;
+  max-width: 680px;
+  padding: 100px 0 0;
+  margin: 0 auto;
   text-align: center;
   background: #e7ecec;
 }
@@ -2272,5 +2277,8 @@ input[type="radio"] {
   color: #666;
   margin: 0;
   letter-spacing: 0.05em;
+}
+@media screen and (max-width: 600px) {
+  .about_cover_simple { padding: 100px 32px 12px; }
 }
 /* ===== /ABOUT SIMPLE COVER ===== */
