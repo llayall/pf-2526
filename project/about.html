@@ -15,13 +15,6 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="./project/guard.js"></script>
-
-    <script>
-        if (sessionStorage.getItem("portfolioAuth") !== "ok") {
-            window.location.href = "../index.html"; // ログインページへ戻す
-        }
-    </script>
     <script>
         currentItem = $(".current-item");
         if (currentItem[0]) {
@@ -76,11 +69,16 @@
 
 <div id="fullpage">
 
-    <div class="about_cover">
+    <!-- <div class="about_cover">
         <div class="myphoto"><img src="imgs/photo.png" width="120" alt=""></div>
         <div class="myname">長澤 彩</div>
-        <div class="myjob">UI/UX Designer・Web Developer</div>
+        <div class="myjob">UI/UX Designer · UI Engineer</div>
         <div class="about_cover_bk"></div>
+    </div> -->
+
+    <div class="about_cover_simple">
+        <p class="myname_simple">長澤 彩</p>
+        <p class="myjob_simple">UI/UX Designer · UI Engineer</p>
     </div>
 
     <div class="section">
@@ -284,7 +282,7 @@
     </div>
 
     <div class="footer">
-        2025 <span>&copy;</span> Aya Nagasawa
+        2026 <span>&copy;</span> Aya Nagasawa
     </div>
 
 </div>

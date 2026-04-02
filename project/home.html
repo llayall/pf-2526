@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <!-- <meta name="viewport" content="width=device-width" /> -->
@@ -16,13 +15,7 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-        <script src="./project/guard.js"></script>
 
-        <script>
-            if (sessionStorage.getItem("portfolioAuth") !== "ok") {
-                window.location.href = "../index.html"; // ログインページへ戻す
-            }
-        </script>
         <script>
             currentItem = $(".current-item");
             if (currentItem[0]) {
@@ -60,7 +53,39 @@
         </script>
 
     </head>
-    <body id="works">
+    <body>
+        <section class="hero" aria-label="プロフィール紹介">
+        <div class="hero__inner">
+            <img
+            class="hero__avatar"
+            src="imgs/photo.png"
+            alt="長澤 彩のプロフィール写真"
+            width="96"
+            height="96"
+            >
+            <p class="hero__role">UI/UX Designer · UI Engineer</p>
+            <h1 class="hero__name">Aya <em>Nagasawa</em></h1>
+            <p class="hero__bio">
+            デザインとフロントエンド実装を一気通貫で担当。<br>
+            誰もが使いやすいサービスをアクセシビリティの視点でつくります。
+            </p>
+            <ul class="hero__badges" aria-label="スキル">
+            <li>UI/UX Design</li>
+            <li>React</li>
+            <!-- <li>WordPress</li> -->
+            <li>Accessibility</li>
+            <!-- <li>Figma</li> -->
+            </ul>
+            <div class="hero__cta">
+            <a href="#works" class="hero__btn hero__btn--primary">Works を見る</a>
+            <a href="about.html" class="hero__btn hero__btn--secondary">About</a>
+            </div>
+            <p class="hero__contact">
+            <a href="mailto:aya.mtsd@gmail.com">aya.mtsd@gmail.com</a>
+            </p>
+        </div>
+        </section>
+
         <div class="header">
             <div class="logo">
                 <a href="home.html">
@@ -75,14 +100,7 @@
 
         <div class="title_img"></div>
 
-        <div class="section">
-
-            <div class="title">
-                <h1 class="name">
-                    Aya NAGASAWA's<br>
-                    Portfolio</h1>
-            </div>
-
+        <div class="section" id="works">
             <div class="work_list">
                 <h3>LINEヤフー株式会社</h3>
                 <ul>
@@ -213,7 +231,7 @@
         </div>
 
         <div class="footer">
-            2025 <span>&copy;</span> Aya Nagasawa
+            2026 <span>&copy;</span> Aya Nagasawa
         </div>
 
     </body>
