@@ -7,73 +7,14 @@
     <title>Aya Nagasawa Portfolio</title>
 	<meta name="Resource-type" content="Document" />
     <link rel="icon" href="http://anne.main.jp/favicon.ico" />
-
-<!--	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />-->
 	<link rel="stylesheet" type="text/css" href="stylesheets/examples.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css" />
-<!--    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-
-    <script>
-        currentItem = $(".current-item");
-        if (currentItem[0]) {
-            currentItem.css({
-                "width": currentItem.width(),
-                "left": currentItem.position().left
-            });
-        }
-        $("#navigation li").hover(
-            // ホバー時
-            function(){ 
-                // ホバーしているメニューの幅と左位置に変更
-                $("#slide-line").css({
-                    "width": $(this).width(),
-                    "left": $(this).position().left
-                });
-            },
-            // ホバーが外れたとき
-            function(){
-                // カレントメニューがある場合
-                if (currentItem[0]) {
-                    // カレントメニューに下線を戻す
-                    $("#slide-line").css({
-                        "width": currentItem.width(),
-                        "left": currentItem.position().left
-                    });
-                }
-                // カレントメニューがない場合
-                else {
-                    // 下線を消す
-                    $("#slide-line").width(0);
-                }
-            }
-        );
-
-        //scroll animation
-        $(function() {
-            $('.work_image_style').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-                if(isInView){
-                    $(this).stop().addClass('mv02');
-                }
-                else{
-                    $(this).stop().removeClass('mv02');
-                }
-            });
-        });
-
-    </script>
-
 </head>
 <body id="works">
 
     <div class="header">
         <div class="logo"><a href="home.html">
             <img src="imgs/logo.png" width="32" height="32" />
-<!--            <span>Aya</span><br><span>Nagasawa</span>-->
             </a>
         </div>
         <ul class="header_menu">
@@ -99,7 +40,6 @@
                 <li class="work_sprint">
                     <a href="sprint.html">
                         <div class="work_image">
-<!--                            <span class="btoB"> BtoB</span>-->
                             <img src="works/sprint_top.png" alt="Sprint" width="100%">
                         </div>
                         <div class="work_name"><span class="btoB">BtoB</span>Sprint</div>
@@ -111,7 +51,6 @@
                 <li class="work_pitajob">
                     <a href="pitajob.html">
                         <div class="work_image">
-<!--                            <span class="btoC"> BtoC</span>-->
                             <img src="works/pitajob_top.jpg" alt="ピタジョブ" width="100%">
                         </div><div class="work_name"><span class="btoC">BtoC</span>ピタジョブ</div>
                         <div class="work_text">UI/UXデザイン<br>HTMLメールデザイン/コーディング</div>
@@ -121,7 +60,6 @@
                 <li class="work_jms">
                     <a href="jms.html">
                         <div class="work_image">
-<!--                            <span class="btoC"> BtoC</span>-->
                             <img src="works/jms_top.png" alt="Just Myshop" width="100%">
                         </div>
                         <div class="work_name"><span class="btoC">BtoC</span>Just Myshop</div>
@@ -133,7 +71,6 @@
                 <li class="work_smilezemi">
                     <a href="smilezemi.html">
                         <div class="work_image">
-<!--                            <span class="btoC"> BtoC</span>-->
                             <img src="works/smilezemi_top.jpg" alt="スマイルゼミ" width="100%">
                         </div>
                         <div class="work_name"><span class="education">教育</span>スマイルゼミ</div>
@@ -144,7 +81,6 @@
                 <li class="work_cocoal">
                     <a href="cocoal.html">
                         <div class="work_image">
-<!--                            <span class="btoC"> BtoC</span>-->
                             <img src="works/cocoal_top.jpg" alt="ココアル" width="100%">
                         </div>
                         <div class="work_name"><span class="btoC">BtoC</span>ココアル</div>
@@ -155,7 +91,6 @@
                 <li class="work_serverview">
                     <a href="serverview.html">
                         <div class="work_image">
-<!--                            <span class="btoB">BtoB</span>-->
                             <img src="works/rc_top.jpg" alt="サーバー監視システム" width="100%">
                         </div>
                         <div class="work_name"><span class="btoB">BtoB</span>サーバー監視システム</div>
@@ -189,7 +124,7 @@
     </div>
 
     <div class="footer">
-        2018 <span>&copy;</span> Aya Nagasawa
+        2026 <span>&copy;</span> Aya Nagasawa
     </div>
 
 </body>

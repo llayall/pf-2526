@@ -6,51 +6,11 @@
     <!-- <meta name="viewport" content="width=device-width" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow" />
-    <title>Aya Nagasawa Portfolio</title>
 	<meta name="Resource-type" content="Document" />
+    <title>Aya Nagasawa Portfolio</title>
     <link rel="icon" href="http://anne.main.jp/favicon.ico" />
-
 	<link rel="stylesheet" type="text/css" href="stylesheets/examples.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css" />
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script>
-        currentItem = $(".current-item");
-        if (currentItem[0]) {
-            currentItem.css({
-                "width": currentItem.width(),
-                "left": currentItem.position().left
-            });
-        }
-        $("#navigation li").hover(
-            // ホバー時
-            function(){ 
-                // ホバーしているメニューの幅と左位置に変更
-                $("#slide-line").css({
-                    "width": $(this).width(),
-                    "left": $(this).position().left
-                });
-            },
-            // ホバーが外れたとき
-            function(){
-                // カレントメニューがある場合
-                if (currentItem[0]) {
-                    // カレントメニューに下線を戻す
-                    $("#slide-line").css({
-                        "width": currentItem.width(),
-                        "left": currentItem.position().left
-                    });
-                }
-                // カレントメニューがない場合
-                else {
-                    // 下線を消す
-                    $("#slide-line").width(0);
-                }
-            }
-        );
-    </script>
-
 </head>
 <body id="about">
 
