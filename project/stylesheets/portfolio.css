@@ -31,9 +31,13 @@ body {
 
 .section {
   max-width: 680px;
-  margin: 5em auto 2em;
+  margin: 4em auto 2em;
   text-align: left;
 }
+.section:first-child {
+  margin: 2em auto 2em;
+}
+
 .section h1, .section h2, .section h3, .section h4 {
   text-align: center;
 }
@@ -79,6 +83,9 @@ p, td {
   .top_img {
     width: 100%;
     margin-top: 60px;
+  }
+  .section {
+    margin: 3em auto 2em;
   }
 }
 .name {
@@ -611,9 +618,8 @@ h1 p {
 #about .about_cover {
   text-align: center;
   width: 100%;
-  height: 400px;
-  color: #fff;
-  padding: 0em 0;
+  background: #fff;
+  padding-bottom: 2em;
 }
 #about .about_cover_bk {
   position: absolute;
@@ -2278,6 +2284,7 @@ input[type="radio"] {
   margin: 0 auto;
   text-align: center;
   background: #e7ecec;
+  background: #fff;
 }
 .myname_simple {
   font-size: 32px;
@@ -2292,6 +2299,6 @@ input[type="radio"] {
   letter-spacing: 0.05em;
 }
 @media screen and (max-width: 600px) {
-  .about_cover_simple { padding: 100px 32px 12px; }
+  .about_cover_simple { padding: 100px 32px 32px; }
 }
 /* ===== /ABOUT SIMPLE COVER ===== */
