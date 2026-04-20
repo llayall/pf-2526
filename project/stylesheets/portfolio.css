@@ -36,7 +36,7 @@ body {
 
 .section {
   max-width: 680px;
-  margin: 0 auto 2em;
+  margin: 0 auto 4em;
   text-align: left;
 }
 .section:first-child {
@@ -2410,6 +2410,18 @@ input[type="radio"] {
   .hero__name { font-size: 44px; }
 }
 /* ===== /HERO ===== */
+
+/* ===== SCROLL FADE IN ===== */
+.js-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== /SCROLL FADE IN ===== */
 
 /* ===== SECTION BG ===== */
 #works {
