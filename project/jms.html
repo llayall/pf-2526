@@ -14,16 +14,23 @@
 <body id="works" class="jms">
 
     <div class="header">
-        <div class="logo"><a href="home.html">
-            <img src="imgs/logo.png" width="32" height="32" />
-            <!--            <span>Aya</span><br><span>Nagasawa</span>-->
+        <div class="logo"><a href="home.html#top">
+            <img src="imgs/logo.png" width="32" height="32" alt="ポートフォリオサイトのロゴ・トップへ遷移" />
             </a>
         </div>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="header_menu">
-            <li><a href="home.html" class="selected">Works</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="home.html#top">Home</a></li>
+            <li><a href="home.html#works" class="selected">Works</a></li>
+            <li><a href="home.html#about">Profile</a></li>
+            <li><a href="home.html#contact">Contact</a></li>
         </ul>
     </div>
+
 
 
     <div class="top_img">
@@ -154,5 +161,24 @@
         2026 <span>&copy;</span> Aya Nagasawa
     </div>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.header_menu');
+        const menuLinks = document.querySelectorAll('.header_menu a');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>

@@ -2346,6 +2346,31 @@ input[type="radio"] {
 }
 /* ===== /HERO ===== */
 
+/* ===== SECTION BG ===== */
+#works {
+  max-width: 100%;
+  background: #fff;
+  padding-bottom: 4em;
+}
+
+#works .sec-title {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work_list {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+#about {
+  background: #f7f5f2;
+  padding-bottom: 2em;
+}
+/* ===== /SECTION BG ===== */
+
 /* ===== SECTION TITLE ===== */
 .sec-title {
   text-align: center;
