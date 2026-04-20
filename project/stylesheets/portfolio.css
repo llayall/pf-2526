@@ -24,9 +24,9 @@ html,body {
 }
 
 body {
-  background: #eee;
   background: #e4e0e6;
   background: #e7ecec;
+  background: #fff;
   color: #000;
   font-family: 'Hiragino Sans', Meiryo, sans-serif;
   font-size: 16px;
@@ -35,7 +35,7 @@ body {
 
 .section {
   max-width: 680px;
-  margin: 4em auto 2em;
+  margin: 0 auto 2em;
   text-align: left;
 }
 .section:first-child {
@@ -635,6 +635,12 @@ h1 p {
   font-size: 5wm;
 }
 
+#works.section {
+  background-color: #e7ecec;
+  background: #f6f4f0;
+  margin-bottom: 0;
+}
+
 #works h1.name {
   margin-top: 1em;
 }
@@ -724,12 +730,12 @@ h1 p {
   z-index: 99;
   font-size: 16¥4px;
 }
-#about h2 {
+/* #about h2 {
   font-size: 16px;
   height: 60px;
   line-height: 60px;
   font-size: 32px;
-}
+} */
 #about p {
   text-align: left;
 }
@@ -2221,6 +2227,9 @@ input[type="radio"] {
     padding: 0.4em;
     font-size: 12px;
   }
+  #works.section {
+    margin-top: 0;
+  }
 }
 
 /* ===== HERO ===== */
@@ -2340,6 +2349,12 @@ input[type="radio"] {
 .hero__contact a:hover { opacity: 1; }
 .hero .hero__name { margin-top: 0; }
 
+#contact.section h2 {
+  margin-bottom: 24px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+
 @media screen and (max-width: 600px) {
   .hero { padding: 60px 16px 48px; }
   .hero__name { font-size: 44px; }
@@ -2353,11 +2368,11 @@ input[type="radio"] {
   padding-bottom: 4em;
 }
 
-#works .sec-title {
+/* #works .sec-title {
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .work_list {
   max-width: 860px;
@@ -2366,7 +2381,7 @@ input[type="radio"] {
 }
 
 #about {
-  background: #f7f5f2;
+  background: #f0ece0;
   padding-bottom: 2em;
 }
 /* ===== /SECTION BG ===== */
@@ -2378,8 +2393,7 @@ input[type="radio"] {
   font-size: 32px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  margin: 2em 0 0.5em;
-  padding: 0;
+  padding: 2em 0 0.5em;
   background: none;
   color: #000;
 }
@@ -2419,6 +2433,7 @@ input[type="radio"] {
   margin: 0 auto;
   text-align: center;
   background: #e7ecec;
+  background: #faf7f2;
   background: #fff;
 }
 .myname_simple {
