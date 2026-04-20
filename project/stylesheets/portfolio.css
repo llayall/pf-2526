@@ -553,7 +553,7 @@ a:hover {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 12px;
-  color: #000;
+  /* color: #000; */
 }
 .activity .place {
   color: #666;
@@ -637,8 +637,8 @@ h1 p {
 }
 
 #works.section {
-  background-color: #e7ecec;
-  background: #f6f4f0;
+  /* background: #f6f4f0;
+  background-color: #e7ecec; */
   margin-bottom: 0;
 }
 
@@ -2560,3 +2560,177 @@ input[type="radio"] {
   }
 }
 /* ===== /MOBILE HEADER MENU ===== */
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1e1c1a;
+    color: #f0ece8;
+  }
+
+  /* examples.css の色を上書き */
+  h1, h2, h3, h4, h5, h6 {
+    color: #e8e4e0;
+  }
+
+  h3 {
+    background-color: #2e2c2a;
+  }
+
+  a {
+    color: #c0d4f0;
+  }
+  a:hover {
+    color: #fff;
+  }
+
+  p strong {
+    background: -webkit-linear-gradient(transparent 60%, rgba(255, 255, 80, 0.25) 0);
+  }
+
+  /* ヘッダー */
+  .header {
+    background: rgba(22, 20, 18, 0.92);
+  }
+  .logo__text {
+    color: #c8c0b8;
+  }
+  .logo {
+    color: #c8c0b8;
+  }
+  .hamburger span {
+    background: #e0dcd8;
+  }
+  .header_menu a {
+    color: #e0dcd8;
+  }
+  .header_menu li a.selected {
+    border-bottom-color: #e0dcd8;
+  }
+  .header_menu a::after {
+    background: #e0dcd8;
+  }
+
+  /* セクション背景 */
+  #works {
+    background: #1e1c1a;
+  }
+  #about {
+    background: #252220;
+  }
+
+  /* セクションタイトル */
+  .sec-title {
+    color: #f0ece8;
+  }
+
+  /* Works カード */
+  .work_list a {
+    color: #e0dcd8;
+  }
+  .work_list a:hover {
+    color: #fff;
+  }
+  .work_list ul .work_text {
+    color: #a09890;
+  }
+  .work_list ul .work_name {
+    color: #e0dcd8;
+  }
+
+  /* itemList */
+  .itemList dl p {
+    color: #a09890;
+  }
+
+  /* About カバー */
+  .about_cover_simple {
+    background: #252220;
+  }
+  .myname_simple {
+    color: #f0ece8;
+  }
+  .myjob_simple {
+    color: #a09890;
+  }
+
+  /* Biography */
+  .biography h3 {
+    background: #2e2c2a;
+  }
+  .biography li:after,
+  .biography li:last-child:after {
+    background: #3e3c3a;
+  }
+  /* .biography .timeline_badge,
+  .biography .timeline_badge.school {
+    background: #3e3c3a;
+  } */
+  .biography .bioTbl_job,
+  .biography .bioTbl_company {
+    color: #e8e4e0;
+  }
+  .biography .bioTbl_date {
+    color: #a09890;
+  }
+
+  .activity .activityTbl a:hover p {
+    color: #fff;
+  }
+  /* フッター */
+  .footer {
+    background: #141210;
+    border-top-color: #2a2826;
+  }
+  .footer__name {
+    color: #f0ece8;
+  }
+  .footer__role {
+    color: #a09890;
+  }
+  .footer__email a {
+    color: #a09890;
+  }
+  .footer__email a:hover {
+    color: #fff;
+  }
+  .footer__link {
+    color: #a09890;
+  }
+  .footer__link:hover {
+    color: #fff;
+  }
+  .footer__copy {
+    color: #4a4846;
+  }
+
+  /* Contact */
+  .contact__linkedin {
+    border-color: #5d9de0;
+    color: #5d9de0;
+  }
+  .contact__linkedin:hover {
+    background: #5d9de0;
+    color: #1e1c1a;
+  }
+
+  /* その他 */
+  .name {
+    color: #6a6460;
+  }
+
+  /* モバイルメニュー */
+  @media screen and (max-width: 800px) {
+    .header_menu {
+      background: rgba(22, 20, 18, 0.97);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    .header_menu a {
+      color: #e0dcd8;
+    }
+    .header_menu li a.selected {
+      color: #7eb8f5;
+    }
+  }
+}
+/* ===== /DARK MODE ===== */
