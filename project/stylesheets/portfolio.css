@@ -11,7 +11,7 @@ html,body {
   scroll-behavior: smooth;
 }
 
-#top, #works, #about, #contact {
+#top, #works, #about {
   scroll-margin-top: 60px;
 }
 
@@ -27,6 +27,7 @@ body {
   background: #e4e0e6;
   background: #e7ecec;
   background: #fff;
+  background: #f6f4f0;
   color: #000;
   font-family: 'Hiragino Sans', Meiryo, sans-serif;
   font-size: 16px;
@@ -2413,8 +2414,8 @@ input[type="radio"] {
 /* ===== SECTION BG ===== */
 #works {
   max-width: 100%;
-  background: #fff;
-  padding-bottom: 4em;
+  /* background: #fff; */
+  /* padding-bottom: 4em; */
 }
 
 /* #works .sec-title {
