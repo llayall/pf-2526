@@ -535,14 +535,33 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  /* padding: 0; */
+}
+.tool_list ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: auto;
+  height: auto;
+  padding: 4px; */
 }
 .tool_list img {
   display: block;
   width: auto;
   height: 60px;
 }
-.tool_list img.copilot {
+.tool_list .github,
+.tool_list .slack,
+.tool_list .miro,
+.tool_list .claude {
+  background: #fff;
+}
+.tool_list .copilot {
+  background: #fff;
+  width: 300px;
+  height: 60px;
+  padding: 12px 24px;
+}
+.tool_list .copilot img {
   height: 36px;
 }
 .tool_list .small img {
@@ -2301,7 +2320,7 @@ input[type="radio"] {
   z-index: 0;
 }
 .hero__inner {
-  max-width: 560px;
+  max-width: 400px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -2322,6 +2341,8 @@ input[type="radio"] {
   margin: 0 0 4px;
 }
 .hero__name {
+  background: rgba(0, 0, 0, .4);
+  padding: 10px;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 40px;
   font-weight: 400;
