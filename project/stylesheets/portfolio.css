@@ -552,11 +552,11 @@ a:hover {
 .tool_list .github,
 .tool_list .slack,
 .tool_list .miro,
+.tool_list .copilot,
 .tool_list .claude {
-  background: #fff;
+  background: #f0ece0;
 }
 .tool_list .copilot {
-  background: #fff;
   width: 300px;
   height: 60px;
   padding: 12px 24px;
@@ -855,6 +855,10 @@ h1 p {
 
 .header a:hover {
   text-decoration: none;
+}
+
+.header picture {
+  line-height: 0;
 }
 
 .logo {
