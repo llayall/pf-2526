@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="Resource-type" content="Document" />
+        <title>Aya Nagasawa Portfolio</title>
+        <link rel="icon" href="http://anne.main.jp/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/examples.css" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    </head>
+    <body>
+        <section class="hero" id="top" aria-label="プロフィール紹介">
+        <div class="hero__inner">
+            <img
+            class="hero__avatar"
+            src="imgs/photo.png"
+            alt="長澤 彩のプロフィール写真"
+            width="96"
+            height="96"
+            >
+            <p class="hero__role">UI/UX Designer · UI Engineer</p>
+            <h1 class="hero__name">Aya <em>Nagasawa</em></h1>
+            <p class="hero__bio">
+            ユーザー課題を起点に、<span class="noWrap">デザインと実装を行き来しながら</span><br>プロダクトを改善し続けます。
+            </p>
+            <ul class="hero__badges" aria-label="スキル">
+                <li>UI/UX Design</li>
+                <li>React</li>
+                <!-- <li>WordPress</li> -->
+                <li>Accessibility</li>
+                <!-- <li>Figma</li> -->
+            </ul>
+            <div class="hero__cta">
+                <a href="#works" class="hero__btn hero__btn--primary">Works を見る</a>
+                <a href="#about" class="hero__btn hero__btn--primary">Profile</a>
+                <br>
+                <a href="https://www.linkedin.com/in/aya-nagasawa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--linkedin"
+                    aria-label="LinkedInプロフィールを見る（新しいタブで開きます）">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="currentColor"
+                        aria-hidden="true" focusable="false">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        </section>
+
+        <div class="header">
+            <div class="logo">
+                <a href="#top">
+                    <picture>
+                        <source srcset="imgs/logo_dark.png" media="(prefers-color-scheme: dark)" />
+                        <img src="imgs/logo.png" width="32" height="32" alt="ポートフォリオサイトのロゴ・トップへ遷移" />
+                    </picture>
+                    <span class="logo__text">Aya Nagasawa's Portfolio</span>
+                </a>
+            </div>
+            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header_menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#about">Profile</a></li>
+            </ul>
+        </div>
+
+        <div class="section" id="works">
+            <h2 class="sec-title">Works</h2>
+            <div class="work_list">
+                <h3>LINEヤフー株式会社</h3>
+                <ul>
+                    <li class="work_sprint">
+                        <a href="ysearch.html">
+                            <div class="work_image">
+                                <img src="works/ysearch_311.png" alt="Yahoo!検索" width="100%" style="background: #fff;">
+                            </div>
+                            <div class="work_name"><span class="btoC">BtoC</span>Yahoo!検索</div>
+                            <div class="work_text">【2019年10月〜2026年3月】<br>UI/UXデザイン<br>UI実装（React/TypeScript）<br>アクセシビリティ推進</div>
+                        </a>
+                    </li>
+
+                    <li class="work_sprint">
+                        <a href="ylifemagazine.html">
+                            <div class="work_image">
+                                <img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoC">BtoC</span>Yahoo!ライフマガジン</div>
+                            <div class="work_text">【2019年4月～2019年9月】<br>UI/UXデザイン<br>UI実装（HTML/CSS）</div>
+
+                        </a>
+                    </li>
+
+                    <li class="work_sprint">
+                        <a href="ymap.html">
+                            <div class="work_image">
+                                <img src="works/ymap.jpg" alt="Yahoo!マップ" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoC">BtoC</span>Yahoo!マップ</div>
+                            <div class="work_text">【2018年10月～2019年3月】<br>UI/UXデザイン<br>UI実装（HTML/CSS）</div>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <h3>株式会社ジャストシステム</h3>
+                <ul>
+
+                    <li class="work_sprint">
+                        <a href="sprint.html">
+                            <div class="work_image">
+                                <img src="works/sprint_top.png" alt="Sprint" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoB">BtoB</span>Sprint</div>
+                            <div class="work_text">UI/UXデザイン<br>ガイドライン作成<br>UI実装（HTML/CSS/JavaScript）<br>Webサイトディレクション<br>動画ディレクション<br>営業資料作成</div>
+                        </a>
+                    </li>
+
+                    <li class="work_pitajob">
+                        <a href="pitajob.html">
+                            <div class="work_image">
+                                <img src="works/pitajob_top.jpg" alt="ピタジョブ" width="100%">
+                            </div><div class="work_name"><span class="btoC">BtoC</span><span class="btoB">BtoB</span>ピタジョブ</div>
+                            <div class="work_text">UI/UXデザイン<br>HTMLメールデザイン/コーディング</div>
+                        </a>
+                    </li>
+
+                    <li class="work_jms">
+                        <a href="jms.html">
+                            <div class="work_image">
+                                <img src="works/jms_top.png" alt="Just Myshop" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoC">BtoC</span>Just Myshop</div>
+                            <div class="work_text">ガイドライン作成<br>UI実装（HTML/CSS）</div>
+                        </a>
+                    </li>
+
+                    <li class="work_smilezemi">
+                        <a href="smilezemi.html">
+                            <div class="work_image">
+                                <img src="works/smilezemi_top.jpg" alt="スマイルゼミ" width="100%">
+                            </div>
+                            <div class="work_name"><span class="education">教育</span>スマイルゼミ</div>
+                            <div class="work_text">UI/UXデザイン<br>UI実装（HTML/CSS/JavaScript）<br>教材作成<br>HTMLメールデザイン/コーディング</div>
+                        </a>
+                    </li>
+
+                    <li class="work_cocoal">
+                        <a href="cocoal.html">
+                            <div class="work_image">
+                                <img src="works/cocoal_top.jpg" alt="ココアル" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoC">BtoC</span>ココアル</div>
+                            <div class="work_text">UI実装（HTML/CSS）</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>株式会社パソナテック（富士通デザイン株式会社 派遣先）</h3>
+                <ul>
+                    <li class="work_serverview">
+                        <a href="serverview.html">
+                            <div class="work_image">
+                                <img src="works/rc_top.jpg" alt="サーバー監視システム" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoB">BtoB</span>サーバー監視システム</div>
+                            <div class="work_text">UI/UXデザイン<br>ガイドライン作成</div>
+                        </a>
+                    </li>
+
+                    <li class="work_medical">
+                        <a href="medical.html">
+                            <div class="work_image">
+                                <img src="works/medical_top.jpg" alt="医事会計システム" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoB">BtoB</span>医事会計システム</div>
+                            <div class="work_text">UIデザイン</div>
+                        </a>
+                    </li>
+
+                    <li class="work_traffic">
+                        <a href="traffic.html">
+                            <div class="work_image">
+                                <img src="works/traffic_top.jpg" alt="交通管制システム" width="100%">
+                            </div>
+                            <div class="work_name"><span class="btoB">BtoB</span>交通管制システム</div>
+                            <div class="work_text">UIデザイン</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="about">
+            <h2 class="sec-title">Profile</h2>
+
+            <div class="section">
+                <p>長野県佐久市在住。岩手県出身。</p>
+                <p>UI/UXデザイナー 兼 UIエンジニアとして、ユーザーリサーチ・情報設計・UIデザインから、PM・エンジニアとの仕様調整まで、プロダクト全体の体験設計に一貫して携わってきました。</p>
+                <p><strong>ユーザー課題を起点に仮説を立て、設計・リリース・検証のサイクルを回しながらプロダクトを改善し続けることを得意としています。</strong></p>
+                <p>BtoB・BtoCを問わず、ユーザーの利用フロー・構造全体への理解を大切にしながら、チームとともに課題解決に向き合います。</p>
+            </div>
+
+            <div class="section">
+                <div class="skill">
+                    <h3>Strengths</h3>
+                    <ul>
+                        <li>仕様が固まっていないフェーズでも、ユーザーの利用フロー・構造を把握したうえで仮説を立て、チームと連携しながらプロダクトを前進させられる</li>
+                        <li>定性・定量データをもとに設計からリリース後の検証まで一貫してUI/UX改善を推進</li>
+                        <li>多様なユーザーを意識したUI設計を実践し、誰でも使えるインターフェースを継続的に追求（Yahoo!検索でWCAG 2.1準拠を推進）</li>
+                        <li>計14年のBtoB製品設計経験を活かし、ユーザーの業務課題を深く理解したプロダクト設計が得意</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Tool＆Technology</h3>
+
+                <div class="tool_list">
+                    <ul>
+                        <li><img src="imgs/photoshop.png" alt="Photoshop"></li>
+                        <li><img src="imgs/illustrator.png" alt="Illustrator"></li>
+                        <li><img src="imgs/Figma-logo.svg" alt="Figma"></li>
+                    </ul>
+                    <ul>
+                        <li><img src="imgs/React-icon.svg" alt="React"></li>
+                        <li><img src="imgs/Typescript_logo.svg" alt="Typescript"></li>
+                        <li><img src="imgs/jest-logo.png" alt="Jest"></li><br>
+                    </ul>
+                    <ul>
+                        <li class="github"><img src="imgs/Github-logo.webp" alt="Github"></li>
+                        <li class="copilot"><img src="imgs/GitHub_Copilot_logo.svg" alt="Github-Copilot"></li>
+                    </ul>
+                    <ul class="small">
+                        <li><img src="imgs/VSCode_icon.svg" alt="VisualStudioCode"></li><br>
+                        <li class="slack"><img src="imgs/Slack_Logo.svg" alt="Slack"></li>
+                        <li class="miro"><img src="imgs/MiroLogo.svg" alt="Miro"></li>
+                        <li><img src="imgs/Notion-logo.png" alt="Notion"></li><br>
+                    </ul>
+                    <ul>
+                        <li class="claude"><img src="imgs/claude.png" alt="claude"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="biography">
+                    <ul>
+                        <li>
+                            <h3>Career</h3>
+                        </li>
+                        <li class="timeline_odd">
+                            <div class="timeline_badge"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="https://www.lycorp.co.jp/ja/" target="_blank">LINEヤフー株式会社（入社時 ヤフー株式会社）</a></div>
+                                <div class="bioTbl_job">UI/UXデザイナー・Webデベロッパー</div>
+                                <div class="bioTbl_date">2018/10 - 2026/03/31</div>
+                                <div class="bioTbl_body">
+                                    Yahoo!マップ、Yahoo!ライフマガジンのデザイン・実装を経て、Yahoo!検索にてUIフロントエンド実装6年、アクセシビリティ推進を2年担当
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_even">
+                            <div class="timeline_badge"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="https://www.justsystems.com/" target="_blank">株式会社ジャストシステム</a></div>
+                                <div class="bioTbl_job">UI/UXデザイナー</div>
+                                <div class="bioTbl_date">2011/7 - 2018/9</div>
+                                <div class="bioTbl_body">
+                                    BtoC、BtoB、教育機関向け、など様々な分野の製品/サービスのUIデザインを経験。ガイドライン策定、営業資料、動画ディレクションまで担当
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_odd">
+                            <div class="timeline_badge"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="https://www.fujitsu.com/jp/about/businesspolicy/tech/design/" target="_blank">株式会社パソナテック（富士通デザイン株式会社 派遣先）</a></div>
+                                <div class="bioTbl_job">UIデザイナー</div>
+                                <div class="bioTbl_date">2006/4 - 2011/5</div>
+                                <div class="bioTbl_body">
+                                    ミドルウェア製品、医療システム、交通システムなどBtoB製品の情報設計の基礎を築いた
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_even">
+                            <div class="timeline_badge"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="https://www.ntt-innovative-devices.com/" target="_blank">株式会社パソナテック（NTTエレクトロニクステクノ株式会社 派遣先）</a></div>
+                                <div class="bioTbl_job">WEBデザイナー</div>
+                                <div class="bioTbl_date">2004/3 - 2006/3</div>
+                                <div class="bioTbl_body">
+                                    自社や関連会社のWebサイトデザイン/コーディングを担当
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_odd">
+                            <div class="timeline_badge school"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company">職業技術校藤沢校</div>
+                                <div class="bioTbl_job">コンピューターデザインコース</div>
+                                <div class="bioTbl_date">2003/4 - 2004/3</div>
+                                <div class="bioTbl_body">
+                                    趣味で作ったフリマサイトが徐々に訪問客が増え、人気のサイトとして雑誌に掲載された
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_even">
+                            <div class="timeline_badge"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="http://www.jspnet.co.jp/" target="_blank">株式会社ジェイエスピー</a></div>
+                                <div class="bioTbl_job">プログラマー</div>
+                                <div class="bioTbl_date">2000/4 - 2002/9</div>
+                                <div class="bioTbl_body">
+                                    大規模ソフトウェア開発のプロセスと、時代の目玉となる製品(FOMA初号機)をリリースするまでのスピード感のある開発現場を経験
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_odd">
+                            <div class="timeline_badge school"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company"><a href="https://www.tsuru.ac.jp/" target="_blank">都留文科大学</a></div>
+                                <div class="bioTbl_job">文学部初等教育学科図工専攻</div>
+                                <div class="bioTbl_date">1996/4 - 2000/3</div>
+                                <div class="bioTbl_body">
+                                    油絵を描いたり、粘土をこねて造形物を作ったり、身近な素材を使った工作をしていた
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline_even">
+                            <div class="timeline_badge school"></div>
+                            <div class="timeline_bioTbl">
+                                <div class="bioTbl_company">岩手県住田町立有住中学校／上有住小学校</div>
+                                <div class="bioTbl_job">新聞部／新聞係</div>
+                                <div class="bioTbl_body">
+                                    先生の代わりに学級通信を毎週発行し、文化祭などのイベント前後には毎日手書きの壁新聞を作成していた。こうした経験が情報設計の原点となっている。
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section privateActivity">
+                <h3>Private Activity</h3>
+
+                <div class="activity">
+
+                    <div class="activityTbl">
+                        <p>東日本大震災で少しでも地元の役に立てればと活動した一部をご紹介します</p>
+                    </div>
+
+                    <div class="activityTbl">
+                        <a href="https://www.google.com/maps/@39.2285725,141.537581,11.68z/data=!4m2!6m1!1s1An8_BDdzfwudS_f5wGfn7uBVGXI" target="_blank">
+                            <h4 class="title">岩手県気仙郡住田町周辺情報マップ</h4>
+                            <p class="date">2011/3 〜</p>
+                            <p>震災後、岩手県沿岸部に向かう人が多くいる中、現地の様子が変わり情報を得にくくなっていることに気づき、震災直後のお店の情報をSNS等で収集しマップに記録・公開しました。SNSで拡散され、現地に行った方から新たな情報を頂き常にブラッシュアップし、多くの方に活用頂けました</p>
+                            <img src="imgs/mymap.jpg" width="100%" alt="東日本大震災発生後に個人で作成した開店お店情報をまとめたGoogleマイマップ">
+                        </a>
+                    </div>
+
+                    <div class="activityTbl">
+                        <a href="https://www.hack4.jp/2011/07/hack-for-japan-iwate-%E9%81%A0%E9%87%8E%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3%E5%AE%9F%E6%96%BD%E5%A0%B1%E5%91%8A/" target="_blank">
+                            <h4 class="title">Hack For Japan Iwate アイディアソン・ハッカソン</h4>
+                            <p class="place">＠岩手県遠野市</p>
+                            <p class="date">2011/7</p>
+                            <p>ITで復興支援を考えるHack For Japan岩手版の第１回目イベントに参加しました。<br>アイディアソンで出たアイディアを基に５つのチームが発足し、私は情報発信チームに所属。震災直後にたちあがった遠野市のボランティアセンター「遠野まごころネット」のWebサイトデザインに携わりました。</p>
+                            <img src="imgs/photo_Tono0723.jpg" width="100%" class="wsmall" alt="Hack For Japan Iwate アイディアソン・ハッカソンの集合写真">
+                            <a href="http://tonomagokoro.net/" target="_blank">
+                                <img src="imgs/magokoro.jpg" class="wsmall" alt="遠野まごころネットWebサイトの画像">
+                            </a>
+                        </a>
+                    </div>
+
+                    <div class="activityTbl">
+                        <h4 class="title">Hack for Iwate 復興していく三陸の店舗を記録しよう</h4>
+                        <p class="place">＠岩手県釜石市/陸前高田市</p>
+                        <p class="date">2012/9</p>
+                        <p>海外から来たOpenStreetMapのマッパーの方々を案内しながら、釜石市や陸前高田市など復興していく街の地図づくりのお手伝いをしました。</p>
+                        <img src="imgs/photo_h4j_4.jpg" class="wsmall" alt="Hack for Iwate ハッカソンの様子">
+                        <img src="imgs/photo_h4j_3.jpg" class="wsmall" alt="Hack for Iwate ハッカソンの集合写真">
+                    </div>
+
+                    <div class="activityTbl">
+                        <h4 class="title">いわて未来MeetUp</h4>
+                        <p class="place">＠HUB TOKYO</p>
+                        <p class="date">2013/3, 2013/7</p>
+                        <p>それまで別々で岩手を応援する活動をしている方々が一同に介したイベント。<br>
+                            各団体のこれまでとこれからの活動報告や、岩手直送の美味しいものを食したり、情報交換をしたり、新しいつながりが生まれ参加者の方々にとって有意義なイベントとなりました。<br>
+                            私はスタッフの１人として、イベント運営の他、スタッフTシャツ・のぼり旗をデザインしました。</p>
+                        <img src="imgs/photo_mirai_1.jpg" class="wsmall" alt="いわて未来MeetUp 集合写真">
+                        <img src="imgs/photo_mirai_2.jpg" class="wsmall" alt="いわて未来MeetUp 受付の様子">
+                        <img src="imgs/photo_mirai_3.jpg" class="wsmall" alt="いわて未来MeetUp 屋外イベントの様子">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="footer">
+            <div class="footer__inner">
+                <p class="footer__name">長澤 彩 · Aya Nagasawa</p>
+                <p class="footer__role">UI/UX Designer · UI Engineer</p>
+                <div class="footer__links">
+                    <a href="https://www.linkedin.com/in/aya-nagasawa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link"
+                        aria-label="LinkedInプロフィールを見る（新しいタブで開きます）">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" focusable="false">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/llayall"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link"
+                        aria-label="GitHubプロフィールを見る（新しいタブで開きます）">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" focusable="false">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <p class="footer__copy">&copy; 2026 NAGASAWA</p>
+            </div>
+        </div>
+
+    <script>
+        // スクロールフェードイン
+        const fadeTargets = document.querySelectorAll(
+            '.sec-title, .work_list ul li, #about .section, .biography li:not(:first-child), .tool_list ul, .activityTbl, .footer__inner'
+        );
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+        fadeTargets.forEach((el, i) => {
+            el.classList.add('js-fade');
+            el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+            fadeObserver.observe(el);
+        });
+
+        // アクティブメニュー（スクロール連動）
+        const sectionIds = ['top', 'works', 'about'];
+        const menuLinks = document.querySelectorAll('.header_menu a');
+
+        function updateActiveMenu() {
+            const offset = 80;
+            const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 8;
+
+
+            let current = sectionIds[0];
+            for (const id of sectionIds) {
+                const el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= offset) {
+                    current = id;
+                }
+            }
+            menuLinks.forEach(link => {
+                link.classList.toggle('selected', link.getAttribute('href') === `#${current}`);
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveMenu, { passive: true });
+        updateActiveMenu();
+
+        // ハンバーガーメニュー
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.header_menu');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+    </body>
+</html>
