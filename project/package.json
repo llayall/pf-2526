@@ -4,6 +4,8 @@
   "description": "",
   "main": "examples.js",
   "scripts": {
+    "css": "sass --no-source-map sass/portfolio.scss stylesheets/portfolio.css",
+    "css:watch": "sass --no-source-map --watch sass/portfolio.scss:stylesheets/portfolio.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
