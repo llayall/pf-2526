@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex, nofollow" />
         <meta name="Resource-type" content="Document" />
         <title>Aya Nagasawa Portfolio</title>
-        <link rel="icon" href="http://anne.main.jp/favicon.ico" />
+        <link rel="icon" href="https://anne.main.jp/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="css/examples.css" />
         <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
         <link rel="stylesheet" type="text/css" href="css/works.css" />
@@ -30,26 +30,12 @@
             <ul class="hero__badges" aria-label="スキル">
                 <li>UI/UX Design</li>
                 <li>React</li>
-                <!-- <li>WordPress</li> -->
                 <li>Accessibility</li>
-                <!-- <li>Figma</li> -->
             </ul>
             <div class="hero__cta">
                 <a href="#works" class="hero__btn hero__btn--primary">Works を見る</a>
                 <a href="#about" class="hero__btn hero__btn--primary">Profile</a>
                 <br>
-                <a href="https://www.linkedin.com/in/aya-nagasawa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn--linkedin"
-                    aria-label="LinkedInプロフィールを見る（新しいタブで開きます）">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 24 24" fill="currentColor"
-                        aria-hidden="true" focusable="false">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                    </svg>
-                    LinkedIn
-                </a>
             </div>
         </div>
         </section>
@@ -64,187 +50,43 @@
                     <span class="logo__text">Aya Nagasawa's Portfolio</span>
                 </a>
             </div>
-            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="header_menu">
-                <li><a href="#top">Home</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#about">Profile</a></li>
-            </ul>
-        </div>
+            <div class="header_nav">
+                <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="header_menu">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#about">Profile</a></li>
+                </ul>
 
-        <!-- <section id="works">
-            <h2 class="sec-title">Works</h2>
-
-            <div class="section">
-                <div class="work_list">
-                    <h3>LINEヤフー株式会社</h3>
-                    <ul>
-                        <li class="work_sprint">
-                            <a href="ysearch.html">
-                                <div class="work_image">
-                                    <img src="works/ysearch_311.png" alt="Yahoo!検索" width="100%" style="background: #fff;">
-                                </div>
-                                <div class="work_name"><span class="btoC">BtoC</span>Yahoo!検索</div>
-                                <div class="work_text">【2019年10月〜2026年3月】<br>UI/UXデザイン<br>UI実装（React/TypeScript）<br>アクセシビリティ推進</div>
-                            </a>
-                        </li>
-
-                        <li class="work_sprint">
-                            <a href="ylifemagazine.html">
-                                <div class="work_image">
-                                    <img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoC">BtoC</span>Yahoo!ライフマガジン</div>
-                                <div class="work_text">【2019年4月～2019年9月】<br>UI/UXデザイン<br>UI実装（HTML/CSS）</div>
-
-                            </a>
-                        </li>
-
-                        <li class="work_sprint">
-                            <a href="ymap.html">
-                                <div class="work_image">
-                                    <img src="works/ymap.jpg" alt="Yahoo!マップ" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoC">BtoC</span>Yahoo!マップ</div>
-                                <div class="work_text">【2018年10月～2019年3月】<br>UI/UXデザイン<br>UI実装（HTML/CSS）</div>
-
-                            </a>
-                        </li>
-
-                    </ul>
-
-
-                    <h3>株式会社ジャストシステム</h3>
-                    <ul>
-
-                        <li class="work_sprint">
-                            <a href="sprint.html">
-                                <div class="work_image">
-                                    <img src="works/sprint_top.png" alt="Sprint" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoB">BtoB</span>Sprint</div>
-                                <div class="work_text">UI/UXデザイン<br>ガイドライン作成<br>UI実装（HTML/CSS/JavaScript）<br>Webサイトディレクション<br>動画ディレクション<br>営業資料作成</div>
-                            </a>
-                        </li>
-
-                        <li class="work_pitajob">
-                            <a href="pitajob.html">
-                                <div class="work_image">
-                                    <img src="works/pitajob_top.jpg" alt="ピタジョブ" width="100%">
-                                </div><div class="work_name"><span class="btoC">BtoC</span><span class="btoB">BtoB</span>ピタジョブ</div>
-                                <div class="work_text">UI/UXデザイン<br>HTMLメールデザイン/コーディング</div>
-                            </a>
-                        </li>
-
-                        <li class="work_jms">
-                            <a href="jms.html">
-                                <div class="work_image">
-                                    <img src="works/jms_top.png" alt="Just Myshop" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoC">BtoC</span>Just Myshop</div>
-                                <div class="work_text">ガイドライン作成<br>UI実装（HTML/CSS）</div>
-                            </a>
-                        </li>
-
-                        <li class="work_smilezemi">
-                            <a href="smilezemi.html">
-                                <div class="work_image">
-                                    <img src="works/smilezemi_top.jpg" alt="スマイルゼミ" width="100%">
-                                </div>
-                                <div class="work_name"><span class="education">教育</span>スマイルゼミ</div>
-                                <div class="work_text">UI/UXデザイン<br>UI実装（HTML/CSS/JavaScript）<br>教材作成<br>HTMLメールデザイン/コーディング</div>
-                            </a>
-                        </li>
-
-                        <li class="work_cocoal">
-                            <a href="cocoal.html">
-                                <div class="work_image">
-                                    <img src="works/cocoal_top.jpg" alt="ココアル" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoC">BtoC</span>ココアル</div>
-                                <div class="work_text">UI実装（HTML/CSS）</div>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h3>株式会社パソナテック（富士通デザイン株式会社 派遣先）</h3>
-                    <ul>
-                        <li class="work_serverview">
-                            <a href="serverview.html">
-                                <div class="work_image">
-                                    <img src="works/rc_top.jpg" alt="サーバー監視システム" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoB">BtoB</span>サーバー監視システム</div>
-                                <div class="work_text">UI/UXデザイン<br>ガイドライン作成</div>
-                            </a>
-                        </li>
-
-                        <li class="work_medical">
-                            <a href="medical.html">
-                                <div class="work_image">
-                                    <img src="works/medical_top.jpg" alt="医事会計システム" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoB">BtoB</span>医事会計システム</div>
-                                <div class="work_text">UIデザイン</div>
-                            </a>
-                        </li>
-
-                        <li class="work_traffic">
-                            <a href="traffic.html">
-                                <div class="work_image">
-                                    <img src="works/traffic_top.jpg" alt="交通管制システム" width="100%">
-                                </div>
-                                <div class="work_name"><span class="btoB">BtoB</span>交通管制システム</div>
-                                <div class="work_text">UIデザイン</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="contact.html"
+                    class="header__contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="お問合せフォームを開く（新しいタブで開きます）">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                </a>
             </div>
-        </section> -->
+        </div>
 
         <section class="section" id="works" data-screen-label="01 Works">
             <h2 class="sec-title">Works</h2>
 
-            <!-- =================== フィルタ =================== -->
             <div class="filter" role="region" aria-label="案件の絞り込み">
-                <!-- <span class="filter__label" id="filter-label">表示を切り替える</span> -->
                 <ul class="filter__list" role="group" aria-labelledby="filter-label">
-                <li>
-                    <button type="button" class="chip chip--all" data-filter="all" aria-pressed="true">
-                    すべて
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="chip" data-filter="design" aria-pressed="false">
-                    <span class="chip__dot" style="color: var(--tag-design)"></span>デザイン業務
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="chip" data-filter="dev" aria-pressed="false">
-                    <span class="chip__dot" style="color: var(--tag-dev)"></span>実装業務
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="chip" data-filter="a11y" aria-pressed="false">
-                    <span class="chip__dot" style="color: var(--tag-a11y)"></span>アクセシビリティ
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="chip" data-filter="btob" aria-pressed="false">
-                    <span class="chip__dot" style="color: var(--tag-btob)"></span>BtoB
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="chip" data-filter="btoc" aria-pressed="false">
-                    <span class="chip__dot" style="color: var(--tag-btoc)"></span>BtoC
-                    </button>
-                </li>
-            </ul>
+                <li><button type="button" class="chip chip--all" data-filter="all" aria-pressed="true">すべて</button></li>
+                <li><button type="button" class="chip" data-filter="design" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-design)"></span>デザイン業務</button></li>
+                <li><button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-dev)"></span>実装業務</button></li>
+                <li><button type="button" class="chip" data-filter="a11y" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-a11y)"></span>アクセシビリティ</button></li>
+                <li><button type="button" class="chip" data-filter="btob" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-btob)"></span>BtoB</button></li>
+                <li><button type="button" class="chip" data-filter="btoc" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-btoc)"></span>BtoC</button></li>
+                </ul>
                 <p class="filter__meta">
                     <span id="filter-count" class="filter__count" aria-live="polite"></span>
                     <span id="filter-status" class="sr-only" aria-live="polite"></span>
@@ -252,244 +94,100 @@
                 </p>
             </div>
 
-            <!-- =================== Works 一覧 =================== -->
             <div class="work_list">
                 <ul class="work_grid" id="work-grid">
-
-                <!-- LINEヤフー -->
                 <li class="work_card" data-company="lineyahoo" data-roles="design dev a11y" data-domain="btoc">
                     <a href="ysearch.html">
-                    <div class="work_image">
-                        <img src="works/ysearch_311.png" alt="Yahoo!検索" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="work_name__title">Yahoo!検索</span>
-                    </div>
-                    <div class="work_text">
-                        <div>【2019年10月〜2026年3月】</div>
-                        <div>UI/UXデザイン</div>
-                        <div>UI実装（React/TypeScript）</div>
-                        <div>アクセシビリティ推進</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                        <span class="role role--dev">実装</span>
-                        <span class="role role--a11y">アクセシビリティ</span>
-                    </div>
+                    <div class="work_image"><img src="works/ysearch_311.png" alt="Yahoo!検索" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!検索</span></div>
+                    <div class="work_text"><div>【2019年10月〜2026年3月】</div><div>UI/UXデザイン</div><div>UI実装（React/TypeScript）</div><div>アクセシビリティ推進</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span><span class="role role--a11y">アクセシビリティ</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="lineyahoo" data-roles="design dev" data-domain="btoc">
                     <a href="ylifemagazine.html">
-                    <div class="work_image">
-                        <img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="work_name__title">Yahoo!ライフマガジン</span>
-                    </div>
-                    <div class="work_text">
-                        <div>【2019年4月〜2019年9月】</div>
-                        <div>UI/UXデザイン</div>
-                        <div>UI実装（HTML/CSS）</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!ライフマガジン</span></div>
+                    <div class="work_text"><div>【2019年4月〜2019年9月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="lineyahoo" data-roles="design dev" data-domain="btoc">
                     <a href="ymap.html">
-                    <div class="work_image">
-                        <img src="works/ymap.jpg" alt="Yahoo!マップ" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="work_name__title">Yahoo!マップ</span>
-                    </div>
-                    <div class="work_text">
-                        <div>【2018年10月〜2019年3月】</div>
-                        <div>UI/UXデザイン</div>
-                        <div>UI実装（HTML/CSS）</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/ymap.jpg" alt="Yahoo!マップ" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!マップ</span></div>
+                    <div class="work_text"><div>【2018年10月〜2019年3月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
-                <!-- ジャストシステム -->
                 <li class="work_card" data-company="justsystems" data-roles="design dev" data-domain="btob">
                     <a href="sprint.html">
-                    <div class="work_image">
-                        <img src="works/sprint_top.png" alt="Sprint" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span>
-                        <span class="work_name__title">Sprint</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UI/UXデザイン</div>
-                        <div>ガイドライン作成</div>
-                        <div>UI実装（HTML/CSS/JavaScript）</div>
-                        <div>Webサイトディレクション</div>
-                        <div>動画ディレクション</div>
-                        <div>営業資料作成</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/sprint_top.png" alt="Sprint" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">Sprint</span></div>
+                    <div class="work_text"><div>UI/UXデザイン</div><div>ガイドライン作成</div><div>UI実装（HTML/CSS/JavaScript）</div><div>Webサイトディレクション</div><div>動画ディレクション</div><div>営業資料作成</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="justsystems" data-roles="design" data-domain="btoc btob">
                     <a href="pitajob.html">
-                    <div class="work_image">
-                        <img src="works/pitajob_top.jpg" alt="ピタジョブ" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span>
-                        <span class="work_name__title">ピタジョブ</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UI/UXデザイン</div>
-                        <div>HTMLメールデザイン/コーディング</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                    </div>
+                    <div class="work_image"><img src="works/pitajob_top.jpg" alt="ピタジョブ" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">ピタジョブ</span></div>
+                    <div class="work_text"><div>UI/UXデザイン</div><div>HTMLメールデザイン/コーディング</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="justsystems" data-roles="dev" data-domain="btoc">
                     <a href="jms.html">
-                    <div class="work_image">
-                        <img src="works/jms_top.png" alt="Just Myshop" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="work_name__title">Just Myshop</span>
-                    </div>
-                    <div class="work_text">
-                        <div>ガイドライン作成</div>
-                        <div>UI実装（HTML/CSS）</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/jms_top.png" alt="Just Myshop" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Just Myshop</span></div>
+                    <div class="work_text"><div>ガイドライン作成</div><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="justsystems" data-roles="design dev" data-domain="edu">
                     <a href="smilezemi.html">
-                    <div class="work_image">
-                        <img src="works/smilezemi_top.jpg" alt="スマイルゼミ" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--edu" aria-label="領域: 教育">教育</span>
-                        <span class="work_name__title">スマイルゼミ</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UI/UXデザイン</div>
-                        <div>UI実装（HTML/CSS/JavaScript）</div>
-                        <div>教材作成</div>
-                        <div>HTMLメールデザイン/コーディング</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/smilezemi_top.jpg" alt="スマイルゼミ" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--edu" aria-label="領域: 教育">教育</span><span class="work_name__title">スマイルゼミ</span></div>
+                    <div class="work_text"><div>UI/UXデザイン</div><div>UI実装（HTML/CSS/JavaScript）</div><div>教材作成</div><div>HTMLメールデザイン/コーディング</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="justsystems" data-roles="dev" data-domain="btoc">
                     <a href="cocoal.html">
-                    <div class="work_image">
-                        <img src="works/cocoal_top.jpg" alt="ココアル" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span>
-                        <span class="work_name__title">ココアル</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UI実装（HTML/CSS）</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--dev">実装</span>
-                    </div>
+                    <div class="work_image"><img src="works/cocoal_top.jpg" alt="ココアル" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">ココアル</span></div>
+                    <div class="work_text"><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">実装</span></div>
                     </a>
                 </li>
-
-                <!-- パソナテック（富士通デザイン派遣先） -->
                 <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
                     <a href="serverview.html">
-                    <div class="work_image">
-                        <img src="works/rc_top.jpg" alt="サーバー監視システム" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span>
-                        <span class="work_name__title">サーバー監視システム</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UI/UXデザイン</div>
-                        <div>ガイドライン作成</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                    </div>
+                    <div class="work_image"><img src="works/rc_top.jpg" alt="サーバー監視システム" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">サーバー監視システム</span></div>
+                    <div class="work_text"><div>UI/UXデザイン</div><div>ガイドライン作成</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
                     <a href="medical.html">
-                    <div class="work_image">
-                        <img src="works/medical_top.jpg" alt="医事会計システム" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span>
-                        <span class="work_name__title">医事会計システム</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UIデザイン</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                    </div>
+                    <div class="work_image"><img src="works/medical_top.jpg" alt="医事会計システム" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">医事会計システム</span></div>
+                    <div class="work_text"><div>UIデザイン</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
                     </a>
                 </li>
-
                 <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
                     <a href="traffic.html">
-                    <div class="work_image">
-                        <img src="works/traffic_top.jpg" alt="交通管制システム" loading="lazy">
-                    </div>
-                    <div class="work_name">
-                        <span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span>
-                        <span class="work_name__title">交通管制システム</span>
-                    </div>
-                    <div class="work_text">
-                        <div>UIデザイン</div>
-                    </div>
-                    <div class="roles" aria-label="この案件の役割">
-                        <span class="role role--design">デザイン</span>
-                    </div>
+                    <div class="work_image"><img src="works/traffic_top.jpg" alt="交通管制システム" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">交通管制システム</span></div>
+                    <div class="work_text"><div>UIデザイン</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
                     </a>
                 </li>
-
                 </ul>
-
-                <p class="empty" id="empty-state" role="status" hidden>
-                該当する案件がありません。
-                </p>
+                <p class="empty" id="empty-state" role="status" hidden>該当する案件がありません。</p>
             </div>
         </section>
-
 
         <section id="about">
             <h2 class="sec-title">Profile</h2>
@@ -516,7 +214,6 @@
             <div class="section">
                 <div class="skill">
                     <h3>スキル・技術</h3>
-
                     <ul class="secPadding">
                         <li><span>OS</span>Mac</li>
                         <li><span>デザイン</span>Figma、Adobe Creative Cloud</li>
@@ -532,18 +229,14 @@
             <div class="section">
                 <div class="biography">
                     <ul>
-                        <li>
-                            <h3>Career</h3>
-                        </li>
+                        <li><h3>Career</h3></li>
                         <li class="timeline_odd">
                             <div class="timeline_badge"></div>
                             <div class="timeline_bioTbl">
                                 <div class="bioTbl_company"><a href="https://www.lycorp.co.jp/ja/" target="_blank">LINEヤフー株式会社（入社時 ヤフー株式会社）</a></div>
                                 <div class="bioTbl_job">UI/UXデザイナー・Webデベロッパー</div>
                                 <div class="bioTbl_date">2018/10 - 2026/03/31</div>
-                                <div class="bioTbl_body">
-                                    Yahoo!マップ、Yahoo!ライフマガジンのデザイン・実装を経て、Yahoo!検索にてUIフロントエンド実装6年、アクセシビリティ推進を2年担当
-                                </div>
+                                <div class="bioTbl_body">Yahoo!マップ、Yahoo!ライフマガジンのデザイン・実装を経て、Yahoo!検索にてUIフロントエンド実装6年、アクセシビリティ推進を2年担当</div>
                             </div>
                         </li>
                         <li class="timeline_even">
@@ -552,9 +245,7 @@
                                 <div class="bioTbl_company"><a href="https://www.justsystems.com/" target="_blank">株式会社ジャストシステム</a></div>
                                 <div class="bioTbl_job">UI/UXデザイナー</div>
                                 <div class="bioTbl_date">2011/7 - 2018/9</div>
-                                <div class="bioTbl_body">
-                                    BtoC、BtoB、教育機関向け、など様々な分野の製品/サービスのUIデザインを経験。ガイドライン策定、営業資料、動画ディレクションまで担当
-                                </div>
+                                <div class="bioTbl_body">BtoC、BtoB、教育機関向け、など様々な分野の製品/サービスのUIデザインを経験。ガイドライン策定、営業資料、動画ディレクションまで担当</div>
                             </div>
                         </li>
                         <li class="timeline_odd">
@@ -563,9 +254,7 @@
                                 <div class="bioTbl_company"><a href="https://www.fujitsu.com/jp/about/businesspolicy/tech/design/" target="_blank">株式会社パソナテック（富士通デザイン株式会社 派遣先）</a></div>
                                 <div class="bioTbl_job">UIデザイナー</div>
                                 <div class="bioTbl_date">2006/4 - 2011/5</div>
-                                <div class="bioTbl_body">
-                                    ミドルウェア製品、医療システム、交通システムなどBtoB製品の情報設計の基礎を築いた
-                                </div>
+                                <div class="bioTbl_body">ミドルウェア製品、医療システム、交通システムなどBtoB製品の情報設計の基礎を築いた</div>
                             </div>
                         </li>
                         <li class="timeline_even">
@@ -574,9 +263,7 @@
                                 <div class="bioTbl_company"><a href="https://www.ntt-innovative-devices.com/" target="_blank">株式会社パソナテック（NTTエレクトロニクステクノ株式会社 派遣先）</a></div>
                                 <div class="bioTbl_job">WEBデザイナー</div>
                                 <div class="bioTbl_date">2004/3 - 2006/3</div>
-                                <div class="bioTbl_body">
-                                    自社や関連会社のWebサイトデザイン/コーディングを担当
-                                </div>
+                                <div class="bioTbl_body">自社や関連会社のWebサイトデザイン/コーディングを担当</div>
                             </div>
                         </li>
                         <li class="timeline_odd">
@@ -585,9 +272,7 @@
                                 <div class="bioTbl_company">職業技術校藤沢校</div>
                                 <div class="bioTbl_job">コンピューターデザインコース</div>
                                 <div class="bioTbl_date">2003/4 - 2004/3</div>
-                                <div class="bioTbl_body">
-                                    趣味で作ったフリマサイトが徐々に訪問客が増え、人気のサイトとして雑誌に掲載された
-                                </div>
+                                <div class="bioTbl_body">趣味で作ったフリマサイトが徐々に訪問客が増え、人気のサイトとして雑誌に掲載された</div>
                             </div>
                         </li>
                         <li class="timeline_even">
@@ -596,9 +281,7 @@
                                 <div class="bioTbl_company"><a href="http://www.jspnet.co.jp/" target="_blank">株式会社ジェイエスピー</a></div>
                                 <div class="bioTbl_job">プログラマー</div>
                                 <div class="bioTbl_date">2000/4 - 2002/9</div>
-                                <div class="bioTbl_body">
-                                    大規模ソフトウェア開発のプロセスと、時代の目玉となる製品(FOMA初号機)をリリースするまでのスピード感のある開発現場を経験
-                                </div>
+                                <div class="bioTbl_body">大規模ソフトウェア開発のプロセスと、時代の目玉となる製品(FOMA初号機)をリリースするまでのスピード感のある開発現場を経験</div>
                             </div>
                         </li>
                         <li class="timeline_odd">
@@ -607,9 +290,7 @@
                                 <div class="bioTbl_company"><a href="https://www.tsuru.ac.jp/" target="_blank">都留文科大学</a></div>
                                 <div class="bioTbl_job">文学部初等教育学科図工専攻</div>
                                 <div class="bioTbl_date">1996/4 - 2000/3</div>
-                                <div class="bioTbl_body">
-                                    油絵を描いたり、粘土をこねて造形物を作ったり、身近な素材を使った工作をしていた
-                                </div>
+                                <div class="bioTbl_body">油絵を描いたり、粘土をこねて造形物を作ったり、身近な素材を使った工作をしていた</div>
                             </div>
                         </li>
                         <li class="timeline_even">
@@ -617,9 +298,7 @@
                             <div class="timeline_bioTbl">
                                 <div class="bioTbl_company">岩手県住田町立有住中学校／上有住小学校</div>
                                 <div class="bioTbl_job">新聞部／新聞係</div>
-                                <div class="bioTbl_body">
-                                    先生の代わりに学級通信を毎週発行し、文化祭などのイベント前後には毎日手書きの壁新聞を作成していた。こうした経験が情報設計の原点となっている。
-                                </div>
+                                <div class="bioTbl_body">先生の代わりに学級通信を毎週発行し、文化祭などのイベント前後には毎日手書きの壁新聞を作成していた。こうした経験が情報設計の原点となっている。</div>
                             </div>
                         </li>
                     </ul>
@@ -628,13 +307,10 @@
 
             <div class="section privateActivity">
                 <h3>Private Activity</h3>
-
                 <div class="activity secPadding">
-
                     <div class="activityTbl">
                         <p>東日本大震災で少しでも地元の役に立てればと活動した一部をご紹介します</p>
                     </div>
-
                     <div class="activityTbl">
                         <a href="https://www.google.com/maps/@39.2285725,141.537581,11.68z/data=!4m2!6m1!1s1An8_BDdzfwudS_f5wGfn7uBVGXI" target="_blank">
                             <h4 class="title">岩手県気仙郡住田町周辺情報マップ</h4>
@@ -643,7 +319,6 @@
                             <img src="imgs/mymap.jpg" width="100%" alt="東日本大震災発生後に個人で作成した開店お店情報をまとめたGoogleマイマップ">
                         </a>
                     </div>
-
                     <div class="activityTbl">
                         <a href="https://www.hack4.jp/2011/07/hack-for-japan-iwate-%E9%81%A0%E9%87%8E%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3%E5%AE%9F%E6%96%BD%E5%A0%B1%E5%91%8A/" target="_blank">
                             <h4 class="title">Hack For Japan Iwate アイディアソン・ハッカソン</h4>
@@ -651,12 +326,9 @@
                             <p class="date">2011/7</p>
                             <p>ITで復興支援を考えるHack For Japan岩手版の第１回目イベントに参加しました。<br>アイディアソンで出たアイディアを基に５つのチームが発足し、私は情報発信チームに所属。震災直後にたちあがった遠野市のボランティアセンター「遠野まごころネット」のWebサイトデザインに携わりました。</p>
                             <img src="imgs/photo_Tono0723.jpg" width="100%" class="wsmall" alt="Hack For Japan Iwate アイディアソン・ハッカソンの集合写真">
-                            <a href="http://tonomagokoro.net/" target="_blank">
-                                <img src="imgs/magokoro.jpg" class="wsmall" alt="遠野まごころネットWebサイトの画像">
-                            </a>
+                            <a href="http://tonomagokoro.net/" target="_blank"><img src="imgs/magokoro.jpg" class="wsmall" alt="遠野まごころネットWebサイトの画像"></a>
                         </a>
                     </div>
-
                     <div class="activityTbl">
                         <h4 class="title">Hack for Iwate 復興していく三陸の店舗を記録しよう</h4>
                         <p class="place">＠岩手県釜石市/陸前高田市</p>
@@ -665,23 +337,35 @@
                         <img src="imgs/photo_h4j_4.jpg" class="wsmall" alt="Hack for Iwate ハッカソンの様子">
                         <img src="imgs/photo_h4j_3.jpg" class="wsmall" alt="Hack for Iwate ハッカソンの集合写真">
                     </div>
-
                     <div class="activityTbl">
                         <h4 class="title">いわて未来MeetUp</h4>
                         <p class="place">＠HUB TOKYO</p>
                         <p class="date">2013/3, 2013/7</p>
-                        <p>それまで別々で岩手を応援する活動をしている方々が一同に介したイベント。<br>
-                            各団体のこれまでとこれからの活動報告や、岩手直送の美味しいものを食したり、情報交換をしたり、新しいつながりが生まれ参加者の方々にとって有意義なイベントとなりました。<br>
-                            私はスタッフの１人として、イベント運営の他、スタッフTシャツ・のぼり旗をデザインしました。</p>
+                        <p>それまで別々で岩手を応援する活動をしている方々が一同に介したイベント。<br>各団体のこれまでとこれからの活動報告や、岩手直送の美味しいものを食したり、情報交換をしたり、新しいつながりが生まれ参加者の方々にとって有意義なイベントとなりました。<br>私はスタッフの１人として、イベント運営の他、スタッフTシャツ・のぼり旗をデザインしました。</p>
                         <img src="imgs/photo_mirai_1.jpg" class="wsmall" alt="いわて未来MeetUp 集合写真">
                         <img src="imgs/photo_mirai_2.jpg" class="wsmall" alt="いわて未来MeetUp 受付の様子">
                         <img src="imgs/photo_mirai_3.jpg" class="wsmall" alt="いわて未来MeetUp 屋外イベントの様子">
                     </div>
-
                 </div>
-
             </div>
+        </section>
 
+        <!-- ===== Contactセクション ===== -->
+        <section class="contact-cta" id="contact" aria-labelledby="contact-cta-title">
+            <div class="contact-cta__inner">
+                <span class="contact-cta__eyebrow">Contact</span>
+                <h2 class="contact-cta__title" id="contact-cta-title">お気軽にご相談ください</h2>
+                <p class="contact-cta__lead">
+                    お仕事のご依頼や採用に関するお問い合わせ、<br>
+                    お気軽にメッセージをお寄せください。
+                </p>
+                <a href="contact.html" class="contact-cta__btn" target="_blank" rel="noopener noreferrer">
+                    お問い合わせフォームへ
+                </a>
+                <p class="contact-cta__sub">
+                    または <a href="https://www.linkedin.com/in/aya-nagasawa" target="_blank" rel="noopener noreferrer">LinkedIn</a> から直接ご連絡いただくことも可能です。
+                </p>
+            </div>
         </section>
 
         <div class="footer">
@@ -689,26 +373,24 @@
                 <p class="footer__name">長澤 彩 · Aya Nagasawa</p>
                 <p class="footer__role">UI/UX Designer · UI Engineer</p>
                 <div class="footer__links">
-                    <a href="https://www.linkedin.com/in/aya-nagasawa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="footer__link"
+                    <a href="contact.html" target="_blank" rel="noopener noreferrer" class="footer__link"
+                        aria-label="お問合せフォームを開く（新しいタブで開きます）">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="M3 7l9 6 9-6"></path>
+                        </svg>
+                        Contact
+                    </a>
+                    <a href="https://www.linkedin.com/in/aya-nagasawa" target="_blank" rel="noopener noreferrer" class="footer__link"
                         aria-label="LinkedInプロフィールを見る（新しいタブで開きます）">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            viewBox="0 0 24 24" fill="currentColor"
-                            aria-hidden="true" focusable="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://github.com/llayall"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="footer__link"
+                    <a href="https://github.com/llayall" target="_blank" rel="noopener noreferrer" class="footer__link"
                         aria-label="GitHubプロフィールを見る（新しいタブで開きます）">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            viewBox="0 0 24 24" fill="currentColor"
-                            aria-hidden="true" focusable="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                         </svg>
                         GitHub
@@ -719,12 +401,11 @@
         </div>
 
     <script>
-        // スクロールフェードイン
         const fadeTargets = document.querySelectorAll(
-            '.sec-title, .work_list ul li, #about .section, .biography li:not(:first-child), .tool_list ul, .activityTbl, .footer__inner'
+            '.sec-title, .work_list ul li, #about .section, .biography li:not(:first-child), .tool_list ul, .activityTbl, .footer__inner, .contact-cta__inner'
         );
         const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
                     fadeObserver.unobserve(entry.target);
@@ -738,15 +419,11 @@
             fadeObserver.observe(el);
         });
 
-        // アクティブメニュー（スクロール連動）
         const sectionIds = ['top', 'works', 'about'];
         const menuLinks = document.querySelectorAll('.header_menu a');
 
         function updateActiveMenu() {
             const offset = 80;
-            const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 8;
-
-
             let current = sectionIds[0];
             for (const id of sectionIds) {
                 const el = document.getElementById(id);
@@ -762,7 +439,6 @@
         window.addEventListener('scroll', updateActiveMenu, { passive: true });
         updateActiveMenu();
 
-        // ハンバーガーメニュー
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('.header_menu');
 
@@ -784,11 +460,9 @@
 (() => {
   'use strict';
 
-  // ---- 設定 ----
-  // role / domain どちらの軸かをマッピング
   const FILTERS = {
-    design: { axis: 'roles',  value: 'design', label: 'デザイン中心' },
-    dev:    { axis: 'roles',  value: 'dev',    label: '実装中心' },
+    design: { axis: 'roles',  value: 'design', label: 'デザイン業務' },
+    dev:    { axis: 'roles',  value: 'dev',    label: '実装業務' },
     a11y:   { axis: 'roles',  value: 'a11y',   label: 'アクセシビリティ' },
     btob:   { axis: 'domain', value: 'btob',   label: 'BtoB' },
     btoc:   { axis: 'domain', value: 'btoc',   label: 'BtoC' },
@@ -799,22 +473,18 @@
   const cards       = Array.from(root.querySelectorAll('.work_card'));
   const empty       = document.getElementById('empty-state');
   const status      = document.getElementById('filter-status');
+  const countEl     = document.getElementById('filter-count');
   const resetBtn    = document.getElementById('filter-reset');
 
   const ALL = 'all';
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ---- 状態 ----
-  /** @type {Set<string>} */
   let active = new Set([ALL]);
 
-  // ---- URL 同期 ----
   function readURL() {
     const p = new URLSearchParams(location.search).get('filter');
     if (!p) return new Set([ALL]);
-    const set = new Set(
-      p.split(',').map(s => s.trim()).filter(s => s in FILTERS)
-    );
+    const set = new Set(p.split(',').map(s => s.trim()).filter(s => s in FILTERS));
     return set.size ? set : new Set([ALL]);
   }
   function writeURL() {
@@ -827,7 +497,6 @@
     history.replaceState(null, '', url);
   }
 
-  // ---- 判定（OR 条件）----
   function cardMatches(card) {
     if (active.has(ALL)) return true;
     const roles  = (card.dataset.roles  || '').split(/\s+/);
@@ -841,19 +510,15 @@
     return false;
   }
 
-  // ---- 適用 ----
   function apply() {
     let visibleCount = 0;
-    const tasks = [];
 
     cards.forEach(card => {
       const shouldShow = cardMatches(card);
       const isShown    = !card.hasAttribute('hidden');
 
       if (shouldShow && !isShown) {
-        // 表示する
         card.hidden = false;
-        // フェードイン
         if (!reduceMotion) {
           card.classList.add('is-leaving');
           requestAnimationFrame(() => {
@@ -861,26 +526,20 @@
           });
         }
       } else if (!shouldShow && isShown) {
-        // 隠す（フェード後に hidden）
         if (!reduceMotion) {
           card.classList.add('is-leaving');
-          tasks.push(new Promise(res => {
-            const onEnd = () => {
-              card.removeEventListener('transitionend', onEnd);
-              card.hidden = true;
-              card.classList.remove('is-leaving');
-              res();
-            };
-            card.addEventListener('transitionend', onEnd, { once: true });
-            // セーフティネット
-            setTimeout(onEnd, 250);
-          }));
+          const onEnd = () => {
+            card.removeEventListener('transitionend', onEnd);
+            card.hidden = true;
+            card.classList.remove('is-leaving');
+          };
+          card.addEventListener('transitionend', onEnd, { once: true });
+          setTimeout(onEnd, 250);
         } else {
           card.hidden = true;
         }
       }
 
-      // 役割タグのハイライト
       const matchKeys = [...active].filter(k => k !== ALL);
       card.querySelectorAll('.role').forEach(el => {
         const role = [...el.classList]
@@ -896,18 +555,22 @@
 
     empty.hidden = visibleCount > 0;
 
-    // チップの aria-pressed
     chips.forEach(c => {
       const key = c.dataset.filter;
       c.setAttribute('aria-pressed', active.has(key) ? 'true' : 'false');
     });
 
-    // リセットボタン
     resetBtn.hidden = active.has(ALL);
 
-    // ライブリージョン（採用担当向けに件数を音声フィードバック）
     const keys = [...active].filter(k => k !== ALL);
     const labels = keys.map(k => FILTERS[k].label).join('、');
+
+    if (active.has(ALL)) {
+      countEl.textContent = '';
+    } else {
+      countEl.innerHTML = `<strong>${visibleCount}</strong>件の案件`;
+    }
+
     status.textContent = active.has(ALL)
       ? `すべての案件を表示中（${visibleCount}件）`
       : `${labels} で絞り込み：${visibleCount}件を表示中`;
@@ -915,7 +578,6 @@
     writeURL();
   }
 
-  // ---- ハンドラ ----
   function toggle(key) {
     if (key === ALL) {
       active = new Set([ALL]);
@@ -935,7 +597,6 @@
     chip.addEventListener('click', () => toggle(chip.dataset.filter));
   });
 
-  // 矢印キーでチップ間移動（Toolbar 風）
   const chipList = root.querySelector('.filter__list');
   chipList.addEventListener('keydown', (e) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
@@ -952,22 +613,8 @@
 
   resetBtn.addEventListener('click', () => toggle(ALL));
 
-  // 初期化
   active = readURL();
   apply();
-
-  const countEl = document.getElementById('filter-count');
-
-    // 件数表示（フィルタ中のみ表示）
-    const keys = [...active].filter(k => k !== ALL);
-    const labels = keys.map(k => FILTERS[k].label).join('、');
-    if (active.has(ALL)) {
-    countEl.textContent = '';
-    } else {
-    countEl.innerHTML = `<strong>${visibleCount}</strong>件の案件`;
-    }
-
-  
 })();
 </script>
 

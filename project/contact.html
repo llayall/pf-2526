@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | お問い合わせ</title>
+<style>
+  /* ====== Worksセクションと同じ視覚言語 ====== */
+  :root {
+    --bg: #f3efe7;
+    --paper: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-mute: #6b6b6b;
+    --line: #e6e0d4;
+    --line-strong: #cdc4b1;
+    --line-soft: #efeae0;
+
+    --accent: #d94545;
+    --error: #c0392b;
+    --success: #1f7a4d;
+
+    --radius-card: 14px;
+    --radius-input: 8px;
+    --radius-pill: 999px;
+
+    --shadow-pill: 0 1px 2px rgba(60,40,15,.04), 0 4px 16px rgba(60,40,15,.05);
+
+    --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+    --sans:  "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ====== レイアウト ====== */
+  .section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 96px 24px 120px;
+  }
+  .sec-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 64px);
+    text-align: center;
+    margin: 0 0 16px;
+    letter-spacing: .02em;
+  }
+  .sec-lead {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin: 0 0 56px;
+  }
+
+  /* ====== フォーム本体 ====== */
+  .contact_form {
+    background: var(--paper);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--line);
+    padding: 40px;
+    box-shadow: var(--shadow-pill);
+  }
+
+  .field {
+    margin: 0 0 24px;
+  }
+  .field:last-of-type { margin-bottom: 0; }
+
+  .field__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .req {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 6px;
+    border-radius: 3px;
+    background: var(--accent);
+    color: #fff;
+    letter-spacing: .04em;
+  }
+  .opt {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 4px 6px;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--ink-mute);
+    border: 1px solid var(--line);
+  }
+
+  .field__hint {
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin: 0 0 8px;
+  }
+
+  .input,
+  .textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-input);
+    padding: 12px 14px;
+    line-height: 1.6;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .input::placeholder,
+  .textarea::placeholder { color: #b6ad97; }
+  .input:hover,
+  .textarea:hover { border-color: #b6ab92; }
+  .input:focus-visible,
+  .textarea:focus-visible {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(26,26,26,.12);
+  }
+  .textarea {
+    min-height: 180px;
+    resize: vertical;
+  }
+
+  /* エラー状態 */
+  .field.is-error .input,
+  .field.is-error .textarea {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(192,57,43,.12);
+  }
+  .field__error {
+    display: none;
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--error);
+  }
+  .field.is-error .field__error { display: block; }
+
+  /* ====== ボタン ====== */
+  .actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .submit {
+    appearance: none;
+    border: 0;
+    background: var(--ink);
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: 16px 56px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: background .15s ease, transform .05s ease;
+    box-shadow: var(--shadow-pill);
+  }
+  .submit:hover { background: #000; }
+  .submit:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+  .submit:active { transform: translateY(1px); }
+  .submit[disabled] {
+    background: #999;
+    cursor: progress;
+  }
+
+  /* ====== 結果メッセージ ====== */
+  .result {
+    margin-top: 32px;
+    padding: 20px 24px;
+    border-radius: var(--radius-card);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .result[hidden] { display: none; }
+  .result--success {
+    background: #e7f3ec;
+    border: 1px solid #b9dcc7;
+    color: var(--success);
+  }
+  .result--error {
+    background: #fbe9e7;
+    border: 1px solid #f3c2bb;
+    color: var(--error);
+  }
+  .result__title {
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .result__body { margin: 0; }
+
+  /* ====== 戻るリンク ====== */
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 32px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .back:hover { color: var(--ink); }
+  .back:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .back::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-left: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+    margin-right: 2px;
+  }
+
+  /* ====== モバイル ====== */
+  @media (max-width: 640px) {
+    .section { padding: 56px 16px 80px; }
+    .sec-lead { margin-bottom: 40px; }
+    .contact_form { padding: 28px 20px; }
+    .submit { width: 100%; padding: 16px; }
+  }
+
+  /* ====== sr-only ====== */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ====== reduce motion ====== */
+  @media (prefers-reduced-motion: reduce) {
+    .input, .textarea, .submit { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="section" data-screen-label="Contact">
+  <a class="back" href="home.html">トップに戻る</a>
+
+  <h1 class="sec-title">Contact</h1>
+  <p class="sec-lead">お仕事のご相談・採用に関するお問い合わせはこちらからお気軽にどうぞ。<br>通常2〜3営業日以内にご返信いたします。</p>
+
+  <form
+    class="contact_form"
+    id="contact-form"
+    action="https://formspree.io/f/xxxxxxxx"
+    method="POST"
+    novalidate
+    aria-describedby="form-result"
+  >
+    <!-- お名前 -->
+    <div class="field" data-field="name">
+      <label class="field__label" for="f-name">
+        お名前<span class="req" aria-hidden="true">必須</span>
+      </label>
+      <input
+        class="input"
+        type="text"
+        id="f-name"
+        name="name"
+        autocomplete="name"
+        required
+        aria-required="true"
+        aria-describedby="f-name-error"
+      >
+      <p class="field__error" id="f-name-error" role="alert">お名前を入力してください。</p>
+    </div>
+
+    <!-- メールアドレス -->
+    <div class="field" data-field="email">
+      <label class="field__label" for="f-email">
+        メールアドレス<span class="req" aria-hidden="true">必須</span>
+      </label>
+      <p class="field__hint" id="f-email-hint">ご返信に使用します。お間違いのないようご確認ください。</p>
+      <input
+        class="input"
+        type="email"
+        id="f-email"
+        name="email"
+        autocomplete="email"
+        inputmode="email"
+        required
+        aria-required="true"
+        aria-describedby="f-email-hint f-email-error"
+      >
+      <p class="field__error" id="f-email-error" role="alert">有効なメールアドレスを入力してください。</p>
+    </div>
+
+    <!-- 件名 -->
+    <div class="field" data-field="subject">
+      <label class="field__label" for="f-subject">
+        件名<span class="opt" aria-hidden="true">任意</span>
+      </label>
+      <input
+        class="input"
+        type="text"
+        id="f-subject"
+        name="subject"
+        autocomplete="off"
+      >
+    </div>
+
+    <!-- 本文 -->
+    <div class="field" data-field="message">
+      <label class="field__label" for="f-message">
+        本文<span class="req" aria-hidden="true">必須</span>
+      </label>
+      <textarea
+        class="textarea"
+        id="f-message"
+        name="message"
+        required
+        aria-required="true"
+        aria-describedby="f-message-error"
+      ></textarea>
+      <p class="field__error" id="f-message-error" role="alert">本文を入力してください。</p>
+    </div>
+
+    <!-- ハニーポット（スパム対策） -->
+    <div class="sr-only" aria-hidden="true">
+      <label for="f-website">Website（入力しないでください）</label>
+      <input type="text" id="f-website" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="submit" id="submit-btn">送信する</button>
+    </div>
+
+    <!-- 結果表示 -->
+    <div
+      class="result result--success"
+      id="form-result"
+      role="status"
+      aria-live="polite"
+      hidden
+    >
+      <p class="result__title">送信が完了しました</p>
+      <p class="result__body">お問い合わせいただきありがとうございます。内容を確認のうえ、ご返信いたします。</p>
+    </div>
+    <div
+      class="result result--error"
+      id="form-error"
+      role="alert"
+      hidden
+    >
+      <p class="result__title">送信に失敗しました</p>
+      <p class="result__body">時間を置いて再度お試しいただくか、直接メール（<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="02677a636f726e6742677a636f726e672c616d6f">[email&#160;protected]</a>）までご連絡ください。</p>
+    </div>
+  </form>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(() => {
+  'use strict';
+
+  const form        = document.getElementById('contact-form');
+  const submitBtn   = document.getElementById('submit-btn');
+  const successBox  = document.getElementById('form-result');
+  const errorBox    = document.getElementById('form-error');
+
+  // バリデーション
+  const validators = {
+    name:    (v) => v.trim().length > 0,
+    email:   (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    message: (v) => v.trim().length > 0,
+  };
+
+  function validateField(name) {
+    const field = form.querySelector(`[data-field="${name}"]`);
+    if (!field) return true;
+    const input = field.querySelector('input, textarea');
+    const ok = validators[name](input.value);
+    field.classList.toggle('is-error', !ok);
+    input.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    return ok;
+  }
+
+  function validateAll() {
+    let firstInvalid = null;
+    for (const name of Object.keys(validators)) {
+      const ok = validateField(name);
+      if (!ok && !firstInvalid) firstInvalid = name;
+    }
+    if (firstInvalid) {
+      const el = form.querySelector(`[data-field="${firstInvalid}"] input, [data-field="${firstInvalid}"] textarea`);
+      if (el) el.focus();
+    }
+    return !firstInvalid;
+  }
+
+  // blur 時に該当フィールドのみ検証
+  Object.keys(validators).forEach(name => {
+    const input = form.querySelector(`[data-field="${name}"] input, [data-field="${name}"] textarea`);
+    if (!input) return;
+    input.addEventListener('blur', () => {
+      // 一度でもエラーが出たフィールドのみ即時検証（押しつけがましくしない）
+      if (input.closest('.field').classList.contains('is-error')) {
+        validateField(name);
+      }
+    });
+  });
+
+  // 送信
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successBox.hidden = true;
+    errorBox.hidden = true;
+
+    if (!validateAll()) return;
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = '送信中…';
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        form.reset();
+        // エラー状態クリア
+        form.querySelectorAll('.field.is-error').forEach(f => f.classList.remove('is-error'));
+        successBox.hidden = false;
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // 成功メッセージにフォーカスを移して読み上げ確実化
+        successBox.setAttribute('tabindex', '-1');
+        successBox.focus();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (err) {
+      errorBox.hidden = false;
+      errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
