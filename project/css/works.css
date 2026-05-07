@@ -1,0 +1,345 @@
+@charset "UTF-8";
+  /* ====== 既存サイトの雰囲気を踏襲したベース ====== */
+  :root {
+    --bg: #f3efe7;             /* 温かいオフホワイト */
+    --paper: #ffffff;          /* 会社名ピル / カード地 */
+    --ink: #1a1a1a;            /* 本文 */
+    --ink-soft: #4a4a4a;
+    --ink-mute: #6b6b6b;
+    --line: #e6e0d4;
+    --line-soft: #efeae0;
+
+    --accent: #d94545;         /* BtoC 赤（既存バッジ色） */
+    --accent-ink: #ffffff;
+
+    --tag-design: #2563a8;     /* デザイン中心 */
+    --tag-dev:    #0f7a5a;     /* 実装中心 */
+    --tag-a11y:   #7a3eb2;     /* アクセシビリティ */
+    --tag-btob:   #1f5a8a;     /* BtoB（既存と同系の青） */
+    --tag-btoc:   #d94545;     /* BtoC */
+    --tag-edu:    #b8742a;     /* 教育（補助） */
+
+    --radius-pill: 999px;
+    --radius-card: 14px;
+    --shadow-pill: 0 1px 2px rgba(60,40,15,.04), 0 4px 16px rgba(60,40,15,.05);
+
+    --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+    --sans:  "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; }
+
+  /* ====== セクション枠 ====== */
+  .section {
+    max-width: 1120px;
+    margin: 0 auto;
+    /* padding: 96px 24px 120px; */
+    padding: 60px 24px;
+  }
+  .sec-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 64px);
+    text-align: center;
+    margin: 0 0 48px;
+    letter-spacing: .02em;
+  }
+
+  /* ====== フィルタバー ====== */
+  .filter {
+    margin: 0 auto 48px;
+    max-width: 960px;
+  }
+  .filter__label {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-mute);
+    text-align: center;
+    margin: 0 0 14px;
+    letter-spacing: .08em;
+  }
+  .filter__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .chip {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 14px;
+    line-height: 1;
+    padding: 12px 18px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background .15s ease, color .15s ease, border-color .15s ease, transform .05s ease;
+    box-shadow: var(--shadow-pill);
+  }
+  .chip:hover {
+    border-color: #cdc4b1;
+  }
+  .chip:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+  }
+  .chip:active { transform: translateY(1px); }
+  .chip__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .85;
+    flex-shrink: 0;
+  }
+  /* 押下中（選択中） */
+  .chip[aria-pressed="true"] {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .chip[aria-pressed="true"] .chip__dot { opacity: 1; }
+
+  /* "すべて" チップだけ少し別扱い */
+  .chip--all { font-weight: 600; }
+
+  .filter__meta {
+    text-align: center;
+    margin: 18px 0 0;
+    font-size: 13px;
+    color: var(--ink-mute);
+    min-height: 1.5em; /* 表示有無で高さ揺れ防止 */
+  }
+  .filter__reset {
+    appearance: none;
+    background: none;
+    border: 0;
+    color: var(--ink-mute);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+  .filter__reset:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+  }
+
+  .filter__count {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .filter__count strong {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 15px;
+    margin: 0 2px;
+  }
+  .filter__count + .filter__reset { margin-left: 12px; }
+
+
+  /* ====== カードグリッド ====== */
+  .work_list {
+    margin: 0;
+  }
+  .work_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px 32px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .work_card {
+    margin: 0;
+  }
+  .work_card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius-card);
+    transition: transform .2s ease;
+  }
+  .work_card a:hover .work_image { transform: translateY(-2px); }
+  .work_card a:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 4px;
+  }
+  .work_image {
+    aspect-ratio: 16 / 10;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+    transition: transform .2s ease;
+    position: relative;
+  }
+  .work_image::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(45deg, #faf7f0 0 10px, #f3efe7 10px 20px);
+    z-index: 0;
+  }
+  .work_image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #fff;
+  }
+  .work_name {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .work_name__title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+  .work_text {
+    margin-top: 8px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .work_text > div + div { margin-top: 0; }
+
+  /* ====== カテゴリバッジ（既存BtoC/BtoB踏襲＋追加） ====== */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #fff;
+    letter-spacing: .04em;
+  }
+  .badge--btoc { background: var(--tag-btoc); }
+  .badge--btob { background: var(--tag-btob); }
+  .badge--edu  { background: var(--tag-edu); }
+
+  /* 役割タグ（淡いトーンで常時表示） */
+  .roles {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .role {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    line-height: 1;
+    padding: 5px 9px 5px 8px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    color: var(--ink-mute);
+    background: transparent;
+  }
+  .role::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .role--design { color: var(--tag-design); }
+  .role--dev    { color: var(--tag-dev); }
+  .role--a11y   { color: var(--tag-a11y); }
+
+  /* ====== ハイライト：選択中フィルタに該当する役割タグを強調 ====== */
+  .role.is-match {
+    background: currentColor;
+  }
+  .role.is-match::before { background: #fff; }
+  .role.is-match { color: var(--c, var(--ink)); }
+  .role--design.is-match { color: var(--tag-design); }
+  .role--dev.is-match    { color: var(--tag-dev); }
+  .role--a11y.is-match   { color: var(--tag-a11y); }
+  .role.is-match {
+    color: #fff;
+  }
+  .role--design.is-match { background: var(--tag-design); border-color: var(--tag-design); }
+  .role--dev.is-match    { background: var(--tag-dev);    border-color: var(--tag-dev); }
+  .role--a11y.is-match   { background: var(--tag-a11y);   border-color: var(--tag-a11y); }
+
+  /* ====== 表示切替（フェード） ====== */
+  .work_card[hidden] { display: none !important; }
+  .work_card {
+    opacity: 1;
+    transition: opacity .18s ease;
+  }
+  .work_card.is-leaving { opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .work_card,
+    .work_image,
+    .chip { transition: none !important; }
+  }
+
+  /* ====== 空状態 ====== */
+  .empty {
+    margin: 40px auto 0;
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 15px;
+    padding: 40px 16px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    max-width: 520px;
+  }
+  .empty[hidden] { display: none; }
+
+  /* ====== モバイル ====== */
+  @media (max-width: 640px) {
+    .section { padding: 64px 16px 96px; }
+    .sec-title { margin-bottom: 32px; }
+    .filter { margin-bottom: 32px; }
+    .chip { padding: 10px 14px; font-size: 13px; }
+    .work_grid { grid-template-columns: 1fr; gap: 32px; }
+    /* スマホ時の横スクロールフィルタ案にしたい場合の参考（コメントアウト）
+    .filter__list { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+    */
+  }
+
+  /* ====== sr-only ====== */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }

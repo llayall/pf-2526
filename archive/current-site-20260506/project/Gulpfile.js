@@ -20,7 +20,7 @@ gulp.task('compass', function(){
     .pipe(compass({
         config_file: 'config.rb',
         comments: false,
-        css: 'stylesheets/',
+        css: 'css/',
         sass: 'sass/'
     }));
 });
