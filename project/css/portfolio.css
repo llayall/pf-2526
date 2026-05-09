@@ -92,7 +92,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #36f;
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -124,7 +124,7 @@ a:hover {
 .section.product_imgs .product_img.product_bk img {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
-.section.profile {
+.section.profileSummary {
   padding-top: 0;
 }
 @media screen and (max-width: 800px) {
@@ -143,8 +143,15 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .secPadding {
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 @media screen and (min-width: 801px) {
-  .secPadding.section.profile,
+  .secPadding.section.profileSummary,
   .secPadding {
     padding-top: 20px;
     padding-left: 60px;
@@ -160,6 +167,16 @@ a:hover {
   padding: 1em 0 0.5em;
   background: none;
   color: #000;
+}
+
+ul.skill_tech li {
+  display: flex;
+  list-style: none;
+}
+@media screen and (max-width: 800px) {
+  ul.skill_tech li {
+    flex-direction: column;
+  }
 }
 
 .header {
@@ -617,25 +634,22 @@ a:hover {
 }
 .skill li {
   list-style: circle;
-  margin-left: 25px;
+  margin-left: 16px;
   margin-right: 6px;
   margin-bottom: 24px;
 }
-@media screen and (max-width: 800px) {
-  .skill li {
-    margin-bottom: 16px;
-  }
-}
-.skill span {
+.skill .skill_text {
   display: inline-block;
-  width: 200px;
+}
+.skill .skill_title {
+  min-width: 220px;
   border: solid 1px #ccc;
   margin-right: 16px;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (max-width: 800px) {
-  .skill span {
+  .skill .skill_title {
     display: inline-block;
     width: 100%;
     margin-right: 0;

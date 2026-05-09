@@ -81,8 +81,8 @@
             <div class="filter" role="region" aria-label="案件の絞り込み">
                 <ul class="filter__list" role="group" aria-labelledby="filter-label">
                 <li><button type="button" class="chip chip--all" data-filter="all" aria-pressed="true">すべて</button></li>
-                <li><button type="button" class="chip" data-filter="design" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-design)"></span>デザイン業務</button></li>
-                <li><button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-dev)"></span>実装業務</button></li>
+                <li><button type="button" class="chip" data-filter="design" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-design)"></span>デザイン</button></li>
+                <li><button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-dev)"></span>実装</button></li>
                 <li><button type="button" class="chip" data-filter="a11y" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-a11y)"></span>アクセシビリティ</button></li>
                 <li><button type="button" class="chip" data-filter="btob" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-btob)"></span>BtoB</button></li>
                 <li><button type="button" class="chip" data-filter="btoc" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-btoc)"></span>BtoC</button></li>
@@ -192,12 +192,13 @@
         <section id="about">
             <h2 class="sec-title">Profile</h2>
 
-            <div class="section secPadding profile">
+            <div class="section profileSummary secPadding">
                 <p>長野県佐久市在住。岩手県出身。</p>
                 <p>UI/UXデザイナー 兼 UIエンジニアとして、ユーザーリサーチ・情報設計・UIデザインから、PM・エンジニアとの仕様調整まで、プロダクト全体の体験設計に一貫して携わってきました。</p>
                 <p><strong>ユーザー課題を起点に仮説を立て、設計・リリース・検証のサイクルを回しながらプロダクトを改善し続けることを得意としています。</strong></p>
                 <p>BtoB・BtoCを問わず、ユーザーの利用フロー・構造全体への理解を大切にしながら、チームとともに課題解決に向き合います。</p>
             </div>
+
 
             <div class="section">
                 <div class="skill">
@@ -215,13 +216,13 @@
                 <div class="skill">
                     <h3>スキル・技術</h3>
                     <ul class="skill_tech">
-                        <li><span>OS</span>Mac</li>
-                        <li><span>デザイン</span>Figma、Adobe Creative Cloud</li>
-                        <li><span>AI系ツール</span>Claude、Claude Code、GitHub Copilot、ChatGPT、Gemini、NotebookLM など</li>
-                        <li><span>開発環境</span>TypeScript、React（Next.js）、Storybook、HTML、CSS など</li>
-                        <li><span>タスク管理</span>Jira、Notion</li>
-                        <li><span>コミュニケーション</span>Slack、Miro、Zoom、Google Meet</li>
-                        <li><span>その他</span>GitHub</li>
+                        <li><div class="skill_title">デザイン</div><div class="skill_text">Adobe Photoshop / Sketch / Figma</div></li>
+                        <li><div class="skill_title">開発環境</div><div class="skill_text">TypeScript / React / Next.js / Storybook / HTML / CSS など</div></li>
+                        <li><div class="skill_title">プロジェクト管理</div><div class="skill_text">JIRA / Confluence / Notion</div></li>
+                        <li><div class="skill_title">コミュニケーション</div><div class="skill_text">Slack / Miro / Zoom / Google Meet</div></li>
+                        <li><div class="skill_title">ソース管理</div><div class="skill_text">GitHub</div></li>
+                        <li><div class="skill_title">AI支援ツール</div><div class="skill_text">Claude Code / GitHub Copilot / ChatGPT / Gemini / NotebookLM など<br>（コード補完・実装レビュー・ドキュメント生成・情報収集に活用し、開発効率と品質の向上を日常的に実践）</div></li>
+                        <li><div class="skill_title">その他</div>アクセシビリティ（WCAG 2.1/JIS X 8341-3:2016） / スクリーンリーダー検証</li>
                     </ul>
                 </div>
             </div>
