@@ -74,6 +74,13 @@ body {
   padding-right: 60px;
 }
 
+@media (max-width: 768px) {
+  .secPadding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 p, td {
   font-size: 16px;
   line-height: 1.8em;
