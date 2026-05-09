@@ -181,13 +181,13 @@
   }
   .work_card a {
     display: block;
-    text-decoration: noen;
+    text-decoration: none;
     color: inherit;
     border-radius: var(--radius-card);
     transition: transform .2s ease;
 
     .work_name__title {
-      text-decoration: noen;
+      text-decoration: underline;
       text-underline-offset: 4px;
       text-decoration-thickness: 1px;
     }
