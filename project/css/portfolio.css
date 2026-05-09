@@ -357,6 +357,11 @@ a:hover {
   margin-bottom: 24px;
 }
 
+.skill_tech li {
+  list-style: none;
+  margin-left: 0;
+}
+
 .skill span {
   display: inline-block;
   width: 200px;
