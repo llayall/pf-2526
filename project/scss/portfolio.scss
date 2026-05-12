@@ -2037,3 +2037,24 @@ input[type="radio"] { display: none; }
   .header__contact,
   .footer__link { transition: none !important; }
 }
+
+.ysearch {
+  h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.santetsu {
+  .santetsu_images{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    img {
+      flex: 1 1 calc(100% / 3);
+      height: auto;
+    };
+  } 
+}

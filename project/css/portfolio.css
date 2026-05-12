@@ -2999,5 +2999,20 @@ input[type=radio] {
     transition: none !important;
   }
 }
+.ysearch h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.santetsu .santetsu_images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.santetsu .santetsu_images img {
+  flex: 1 1 33.3333333333%;
+  height: auto;
+}
 
 /*# sourceMappingURL=portfolio.css.map */
