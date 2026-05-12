@@ -1379,6 +1379,13 @@ ul.skill_tech {
   h3 { text-align: center; }
 
   @include sp { padding-left: 10vw; padding-right: 10vw; }
+
+  ul {
+    @include pc { display: flex; gap: 20px; }
+  }
+  li {
+    @include pc { flex: 1; }
+  }
 }
 
 // ============================================================

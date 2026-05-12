@@ -1519,6 +1519,17 @@ ul.skill_tech li {
     padding-right: 10vw;
   }
 }
+@media screen and (min-width: 801px) {
+  .other ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 801px) {
+  .other li {
+    flex: 1;
+  }
+}
 
 .product_text {
   max-width: 660px;
