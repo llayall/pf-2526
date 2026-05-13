@@ -2058,3 +2058,12 @@ input[type="radio"] { display: none; }
     };
   } 
 }
+
+.bullet_list {
+  list-style: disc;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}

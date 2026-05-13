@@ -3015,4 +3015,12 @@ input[type=radio] {
   height: auto;
 }
 
+.bullet_list {
+  list-style: disc;
+  padding-left: 20px;
+}
+.bullet_list li {
+  margin-bottom: 0.5em;
+}
+
 /*# sourceMappingURL=portfolio.css.map */
