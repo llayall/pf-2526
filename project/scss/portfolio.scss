@@ -1015,6 +1015,93 @@ ul.skill_tech {
 }
 
 // ============================================================
+// Activity Grid
+// ============================================================
+.activity__intro {
+  font-size: 16px;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.activity_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px 32px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.activity_card {
+  margin: 0;
+
+  > a,
+  > div {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  > a {
+    &:hover {
+      .title { color: $color-blue-link; }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-black;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  .activity_card__body {
+    padding-top: 12px;
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 6px 0 8px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    .place { font-size: 13px; color: $color-gray-mid; margin: 0; }
+    .date  { font-size: 12px; color: $color-gray-mid; margin: 2px 0 0; }
+
+    p:not(.place):not(.date) {
+      font-size: 14px;
+      margin-top: 8px;
+      color: $color-gray-mid;
+    }
+  }
+
+  .activity_card__sub-img {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .activity_card__sub-imgs {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+
+    img {
+      width: calc(50% - 4px);
+      border-radius: 4px;
+      display: block;
+    }
+  }
+}
+
+// ============================================================
 // Tool list
 // ============================================================
 .tool_list {
