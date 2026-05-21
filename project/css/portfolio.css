@@ -63,7 +63,6 @@ h3 {
   background-color: #fff;
   font-size: 18px;
   line-height: 36px;
-  border-radius: 33px;
 }
 
 h4 {
@@ -644,17 +643,21 @@ ul.skill_tech li {
 }
 .skill .skill_title {
   min-width: 220px;
-  border: solid 1px #ccc;
+  border-right: solid 1px #000;
   margin-right: 16px;
+  padding-right: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: right;
 }
 @media screen and (max-width: 800px) {
   .skill .skill_title {
     display: inline-block;
+    border-right: none;
+    border-bottom: solid 1px #000;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
+    text-align: left;
   }
 }
 

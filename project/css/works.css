@@ -12,8 +12,9 @@
     --accent: #d94545;         /* BtoC 赤（既存バッジ色） */
     --accent-ink: #ffffff;
 
-    --tag-design: #2563a8;     /* デザイン中心 */
-    --tag-dev:    #0f7a5a;     /* 実装中心 */
+    --tag-ia:     #c07a28;     /* 情報設計 */
+    --tag-design: #2563a8;     /* UIデザイン */
+    --tag-dev:    #0f7a5a;     /* UI実装 */
     --tag-a11y:   #7a3eb2;     /* アクセシビリティ */
     --tag-btob:   #1f5a8a;     /* BtoB（既存と同系の青） */
     --tag-btoc:   #d94545;     /* BtoC */
@@ -236,6 +237,16 @@
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   } */
+  .work_tagline {
+    margin-top: 8px;
+    display: inline-block;
+    background: var(--line-soft);
+    background: #e2e0d0;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
   .work_text {
     margin-top: 8px;
     color: var(--ink-soft);
@@ -285,6 +296,7 @@
     border-radius: 50%;
     background: currentColor;
   }
+  .role--ia     { color: var(--tag-ia); }
   .role--design { color: var(--tag-design); }
   .role--dev    { color: var(--tag-dev); }
   .role--a11y   { color: var(--tag-a11y); }
@@ -295,12 +307,14 @@
   }
   .role.is-match::before { background: #fff; }
   .role.is-match { color: var(--c, var(--ink)); }
+  .role--ia.is-match     { color: var(--tag-ia); }
   .role--design.is-match { color: var(--tag-design); }
   .role--dev.is-match    { color: var(--tag-dev); }
   .role--a11y.is-match   { color: var(--tag-a11y); }
   .role.is-match {
     color: #fff;
   }
+  .role--ia.is-match     { background: var(--tag-ia);     border-color: var(--tag-ia); }
   .role--design.is-match { background: var(--tag-design); border-color: var(--tag-design); }
   .role--dev.is-match    { background: var(--tag-dev);    border-color: var(--tag-dev); }
   .role--a11y.is-match   { background: var(--tag-a11y);   border-color: var(--tag-a11y); }

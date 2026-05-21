@@ -83,7 +83,8 @@
             <div class="filter" role="region" aria-label="案件の絞り込み">
                 <ul class="filter__list" role="group" aria-labelledby="filter-label">
                 <li><button type="button" class="chip chip--all" data-filter="all" aria-pressed="true">すべて</button></li>
-                <li><button type="button" class="chip" data-filter="design" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-design)"></span>UIデザイン/情報設計</button></li>
+                <li><button type="button" class="chip" data-filter="ia" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-ia)"></span>情報設計</button></li>
+                <li><button type="button" class="chip" data-filter="design" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-design)"></span>UIデザイン</button></li>
                 <li><button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-dev)"></span>UI実装</button></li>
                 <li><button type="button" class="chip" data-filter="a11y" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-a11y)"></span>アクセシビリティ</button></li>
                 <li><button type="button" class="chip" data-filter="btob" aria-pressed="false"><span class="chip__dot" style="color: var(--tag-btob)"></span>BtoB</button></li>
@@ -98,44 +99,55 @@
 
             <div class="work_list">
                 <ul class="work_grid" id="work-grid">
-                <li class="work_card" data-company="lineyahoo" data-roles="design dev a11y" data-domain="btoc">
+                <li class="work_card" data-company="lineyahoo" data-roles="ia dev a11y" data-domain="btoc">
                     <a href="ysearch.html">
                     <div class="work_image"><img src="works/ysearch_311.png" alt="Yahoo!検索" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!検索</span></div>
+                    <p class="work_tagline">広告UIを2年半事故ゼロで安定運用</p>
                     <div class="work_text"><div>【2019年10月〜2026年3月】</div><div>検索UIの継続改善</div><div>React/TypeScript実装</div><div>アクセシビリティ推進</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span><span class="role role--a11y">アクセシビリティ</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--dev">UI実装</span><span class="role role--a11y">アクセシビリティ</span></div>
                     </a>
                 </li>
-                <li class="work_card" data-company="lineyahoo" data-roles="design dev" data-domain="btoc">
-                    <a href="ylifemagazine.html">
-                    <div class="work_image"><img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" loading="lazy"></div>
-                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!ライフマガジン</span></div>
-                    <div class="work_text"><div>【2019年4月〜2019年9月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
-                    </a>
-                </li>
-                <li class="work_card" data-company="lineyahoo" data-roles="design dev" data-domain="btoc">
-                    <a href="ymap.html">
-                    <div class="work_image"><img src="works/ymap.jpg" alt="Yahoo!マップ" loading="lazy"></div>
-                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!マップ</span></div>
-                    <div class="work_text"><div>【2018年10月〜2019年3月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
-                    </a>
-                </li>
-                <li class="work_card" data-company="justsystems" data-roles="design dev" data-domain="btob">
+                <li class="work_card" data-company="justsystems" data-roles="ia design dev" data-domain="btob">
                     <a href="sprint.html">
                     <div class="work_image"><img src="works/sprint_top.png" alt="Sprint" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">Sprint</span></div>
+                    <p class="work_tagline">新規サービス50画面のUI設計/実装まで完結</p>
                     <div class="work_text"><div>UI/UXデザイン</div><div>ガイドライン作成</div><div>UI実装（HTML/CSS/JavaScript）</div><div>Webサイトディレクション</div><div>動画ディレクション</div><div>営業資料作成</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span><span class="role role--dev">UI実装</span></div>
                     </a>
                 </li>
-                <li class="work_card" data-company="justsystems" data-roles="design" data-domain="btoc btob">
+                <li class="work_card" data-company="justsystems" data-roles="ia design dev" data-domain="edu">
+                    <a href="smilezemi.html">
+                    <div class="work_image"><img src="works/smilezemi_top.jpg" alt="スマイルゼミ" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--edu" aria-label="領域: 教育">教育</span><span class="work_name__title">スマイルゼミ</span></div>
+                    <p class="work_tagline">保護者向けサイト新規UI設計/実装まで完結</p>
+                    <div class="work_text"><div>UI/UXデザイン</div><div>UI実装（HTML/CSS/JavaScript）</div><div>教材作成</div><div>HTMLメールデザイン/コーディング</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span><span class="role role--dev">UI実装</span></div>
+                    </a>
+                </li>
+                <li class="work_card" data-company="justsystems" data-roles="ia dev" data-domain="btoc btob">
                     <a href="pitajob.html">
                     <div class="work_image"><img src="works/pitajob_top.jpg" alt="ピタジョブ" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">ピタジョブ</span></div>
                     <div class="work_text"><div>UI/UXデザイン</div><div>HTMLメールデザイン/コーディング</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--dev">UI実装</span></div>
+                    </a>
+                </li>
+                <li class="work_card" data-company="lineyahoo" data-roles="ia design dev" data-domain="btoc">
+                    <a href="ylifemagazine.html">
+                    <div class="work_image"><img src="works/ylifemagazine.jpg" alt="Yahoo!ライフマガジン" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!ライフマガジン</span></div>
+                    <div class="work_text"><div>【2019年4月〜2019年9月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span><span class="role role--dev">UI実装</span></div>
+                    </a>
+                </li>
+                <li class="work_card" data-company="lineyahoo" data-roles="ia dev" data-domain="btoc">
+                    <a href="ymap.html">
+                    <div class="work_image"><img src="works/ymap.jpg" alt="Yahoo!マップ" loading="lazy"></div>
+                    <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Yahoo!マップ</span></div>
+                    <div class="work_text"><div>【2018年10月〜2019年3月】</div><div>UI/UXデザイン</div><div>UI実装（HTML/CSS）</div></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--dev">UI実装</span></div>
                     </a>
                 </li>
                 <li class="work_card" data-company="justsystems" data-roles="dev" data-domain="btoc">
@@ -143,15 +155,7 @@
                     <div class="work_image"><img src="works/jms_top.png" alt="Just Myshop" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">Just Myshop</span></div>
                     <div class="work_text"><div>ガイドライン作成</div><div>UI実装（HTML/CSS）</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">実装</span></div>
-                    </a>
-                </li>
-                <li class="work_card" data-company="justsystems" data-roles="design dev" data-domain="edu">
-                    <a href="smilezemi.html">
-                    <div class="work_image"><img src="works/smilezemi_top.jpg" alt="スマイルゼミ" loading="lazy"></div>
-                    <div class="work_name"><span class="badge badge--edu" aria-label="領域: 教育">教育</span><span class="work_name__title">スマイルゼミ</span></div>
-                    <div class="work_text"><div>UI/UXデザイン</div><div>UI実装（HTML/CSS/JavaScript）</div><div>教材作成</div><div>HTMLメールデザイン/コーディング</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span><span class="role role--dev">実装</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">UI実装</span></div>
                     </a>
                 </li>
                 <li class="work_card" data-company="justsystems" data-roles="dev" data-domain="btoc">
@@ -159,31 +163,31 @@
                     <div class="work_image"><img src="works/cocoal_top.jpg" alt="ココアル" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btoc" aria-label="領域: BtoC">BtoC</span><span class="work_name__title">ココアル</span></div>
                     <div class="work_text"><div>UI実装（HTML/CSS）</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">実装</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--dev">UI実装</span></div>
                     </a>
                 </li>
-                <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
+                <li class="work_card" data-company="pasonatech" data-roles="ia design" data-domain="btob">
                     <a href="serverview.html">
                     <div class="work_image"><img src="works/rc_top.jpg" alt="サーバー監視システム" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">サーバー監視システム</span></div>
                     <div class="work_text"><div>UI/UXデザイン</div><div>ガイドライン作成</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span></div>
                     </a>
                 </li>
-                <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
+                <li class="work_card" data-company="pasonatech" data-roles="ia design" data-domain="btob">
                     <a href="medical.html">
                     <div class="work_image"><img src="works/medical_top.jpg" alt="医事会計システム" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">医事会計システム</span></div>
                     <div class="work_text"><div>UIデザイン</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span></div>
                     </a>
                 </li>
-                <li class="work_card" data-company="pasonatech" data-roles="design" data-domain="btob">
+                <li class="work_card" data-company="pasonatech" data-roles="ia design" data-domain="btob">
                     <a href="traffic.html">
                     <div class="work_image"><img src="works/traffic_top.jpg" alt="交通管制システム" loading="lazy"></div>
                     <div class="work_name"><span class="badge badge--btob" aria-label="領域: BtoB">BtoB</span><span class="work_name__title">交通管制システム</span></div>
                     <div class="work_text"><div>UIデザイン</div></div>
-                    <div class="roles" aria-label="この案件の役割"><span class="role role--design">デザイン</span></div>
+                    <div class="roles" aria-label="この案件の役割"><span class="role role--ia">情報設計</span><span class="role role--design">UIデザイン</span></div>
                     </a>
                 </li>
                 </ul>
@@ -310,7 +314,9 @@
 
             <div class="section privateActivity">
                 <h3>Private Activity</h3>
-                <p class="activity__intro secPadding">東日本大震災で少しでも地元の役に立てればという思いで活動した一部をご紹介します。</p>
+                <p class="activity__intro secPadding">東日本大震災で少しでも地元の役に立てればという思いで活動した一部をご紹介します。<br>
+                    それまでの業務で培ったスキルがこれらの活動に活き、また活動を通じて得た経験がその後の仕事にも影響しています。
+                </p>
                 <ul class="activity_grid secPadding">
 
                     <li class="activity_card">
@@ -492,8 +498,9 @@
   'use strict';
 
   const FILTERS = {
-    design: { axis: 'roles',  value: 'design', label: 'デザイン業務' },
-    dev:    { axis: 'roles',  value: 'dev',    label: '実装業務' },
+    ia:     { axis: 'roles',  value: 'ia',     label: '情報設計' },
+    design: { axis: 'roles',  value: 'design', label: 'UIデザイン' },
+    dev:    { axis: 'roles',  value: 'dev',    label: 'UI実装' },
     a11y:   { axis: 'roles',  value: 'a11y',   label: 'アクセシビリティ' },
     btob:   { axis: 'domain', value: 'btob',   label: 'BtoB' },
     btoc:   { axis: 'domain', value: 'btoc',   label: 'BtoC' },
