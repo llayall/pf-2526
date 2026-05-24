@@ -700,6 +700,12 @@ ul.skill_tech li {
 #about .section h4 {
   text-align: left;
 }
+#about .section h4.itemTitle {
+  margin: 40px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
 #about .about_cover {
   text-align: center;
   width: 100%;
@@ -1013,8 +1019,11 @@ ul.skill_tech li {
 }
 .activity .date {
   font-size: 12px;
-  color: #666;
-  margin: 0.5em auto;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 2px 0;
 }
 .activity a:hover .place {
   color: #666;
@@ -1066,8 +1075,9 @@ ul.skill_tech li {
 
 .activity__intro {
   font-size: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 40px;
   text-align: left;
+  padding-top: 0;
 }
 
 .activity_grid {
@@ -1075,13 +1085,17 @@ ul.skill_tech li {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px 32px;
   padding: 0;
-  margin: 0;
+  margin-bottom: 74px;
   list-style: none;
+}
+.activity_grid:last-child {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 800px) {
   .activity_grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -1102,6 +1116,19 @@ ul.skill_tech li {
   outline-offset: 4px;
   border-radius: 4px;
 }
+.activity_card .date {
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  padding: 2px 12px;
+  margin: 10px 0;
+}
+.activity_card .date.doing {
+  background-color: #339931;
+  font-weight: bold;
+}
 .activity_card .activity_card__body {
   padding-top: 12px;
 }
@@ -1117,11 +1144,6 @@ ul.skill_tech li {
   font-size: 13px;
   color: #666;
   margin: 0;
-}
-.activity_card .activity_card__body .date {
-  font-size: 12px;
-  color: #666;
-  margin: 2px 0 0;
 }
 .activity_card .activity_card__body p:not(.place):not(.date) {
   font-size: 14px;

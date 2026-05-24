@@ -739,6 +739,10 @@ ul.skill_tech {
 
   .section h4  { text-align: left; }
 
+  .section h4.itemTitle {
+    margin: 40px auto; text-align: center; font-weight: bold; font-size: 24px;
+  }
+
   .about_cover {
     text-align: center;
     width: 100%;
@@ -973,7 +977,8 @@ ul.skill_tech {
 .activity {
   .title    { font-weight: bold; font-size: 24px; margin-bottom: 12px; }
   .place    { color: $color-gray-mid; }
-  .date     { font-size: 12px; color: $color-gray-mid; margin: 0.5em auto; }
+  // .date     { font-size: 12px; color: $color-gray-mid; margin: 0.5em auto; }
+  .date  { font-size: 12px; color: #fff; background-color: #000; border-radius: 4px; padding: 2px 6px; margin: 2px 0; }
 
   a:hover .place { color: $color-gray-mid; }
 
@@ -1022,8 +1027,9 @@ ul.skill_tech {
 // ============================================================
 .activity__intro {
   font-size: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 40px;
   text-align: left;
+  padding-top: 0;
 }
 
 .activity_grid {
@@ -1031,12 +1037,15 @@ ul.skill_tech {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px 32px;
   padding: 0;
-  margin: 0;
+  margin-bottom: 74px;
   list-style: none;
+
+  &:last-child { margin-bottom: 0; }
 
   @include sp {
     grid-template-columns: 1fr;
     gap: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -1061,6 +1070,10 @@ ul.skill_tech {
       border-radius: 4px;
     }
   }
+  .date  { 
+    display: inline-block; font-size: 12px; color: #fff; background-color: #000; border-radius: 4px; padding: 2px 12px; margin: 10px 0;
+    &.doing { background-color: #339931; font-weight: bold; }
+  }
 
   .activity_card__body {
     padding-top: 12px;
@@ -1075,7 +1088,7 @@ ul.skill_tech {
     }
 
     .place { font-size: 13px; color: $color-gray-mid; margin: 0; }
-    .date  { font-size: 12px; color: $color-gray-mid; margin: 2px 0 0; }
+    // .date  { font-size: 12px; color: $color-gray-mid; margin: 2px 0 0; }
 
     p:not(.place):not(.date) {
       font-size: 14px;
