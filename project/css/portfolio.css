@@ -529,6 +529,10 @@ ul.skill_tech li {
   }
 }
 
+.fs-12 {
+  font-size: 12px;
+}
+
 .work_list a {
   color: #000;
 }

@@ -565,6 +565,8 @@ ul.skill_tech {
   @include sp { &.section { margin-top: 0; } }
 }
 
+.fs-12 { font-size: 12px; }
+
 .work_list {
   a {
     color: $color-black;
