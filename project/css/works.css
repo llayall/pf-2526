@@ -232,6 +232,9 @@
     font-size: 18px;
     font-weight: 700;
   }
+  .work_name__title .fs-12 {
+    display: block;
+  }
   /* .work_name__title {
     text-decoration: underline;
     text-underline-offset: 4px;
