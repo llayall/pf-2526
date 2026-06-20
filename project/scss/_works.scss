@@ -340,6 +340,18 @@ a { color: inherit; }
   .work_grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ====== ストーリー見出し（Yahoo!検索など複数ストーリーがある案件用） ====== */
+.summary__story-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-mute);
+  margin: 24px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
 /* ====== sr-only ====== */
 .sr-only {
   position: absolute;
