@@ -247,6 +247,7 @@ a { color: inherit; }
   font-size: 14px;
 }
 .work_text > div + div { margin-top: 0; }
+.work_text__note { font-size: 12px; color: var(--ink-mute); margin-top: 4px; }
 
 /* ====== カテゴリバッジ（既存BtoC/BtoB踏襲＋追加） ====== */
 .badge {
