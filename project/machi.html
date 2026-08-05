@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="Resource-type" content="Document" />
+    <title>地域情報サイト開発（地域密着型プログラミング教室検索サイト）</title>
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+</head>
+
+<body id="works" class="machi">
+
+    <div class="header">
+        <div class="logo">
+            <a href="home.html#top">
+                <picture>
+                    <source srcset="imgs/logo_dark.png" media="(prefers-color-scheme: dark)" />
+                    <img src="imgs/logo.png" width="32" height="32" alt="ポートフォリオサイトのロゴ・トップへ遷移" />
+                </picture>
+                <span class="logo__text">Aya Nagasawa's Portfolio</span>
+            </a>
+        </div>
+        <div class="header_nav">
+            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header_menu">
+                <li><a href="home.html#top">Home</a></li>
+                <li><a href="home.html#works">Works</a></li>
+                <li><a href="home.html#about">About</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="top_img">
+        <img src="imgs/machi0_hero.png" alt="トップページの複数デザイン案の比較（Figma）">
+    </div>
+
+    <div class="section">
+
+        <div class="title">
+            <span class="company fdl">プログラミング教室運営企業</span>
+            <div>地域密着型プログラミング教室検索サイト（愛知・岐阜・三重・長野）</div>
+            <h1>地域情報サイト開発</h1>
+        </div>
+
+        <div class="summary">
+
+            <dl>
+                <div>
+                    <dt>サイト概要</dt>
+                    <dd>既存の親サイトの姉妹サイト。愛知・岐阜・三重・長野の4県に対応した、地域密着型プログラミング教室の検索サイト。</dd>
+                </div>
+                <div>
+                    <dt>フェーズ</dt>
+                    <dd><span class="status_new">進行中</span> Figma検討・WordPress実装</dd>
+                </div>
+                <div>
+                    <dt>担当</dt>
+                    <dd>情報設計・UIデザイン（Figma）・UI実装（WordPress／Cocoon）を一人で担当</dd>
+                </div>
+                <div>
+                    <dt>使用ツール</dt>
+                    <dd>Figma / WordPress（Cocoon） / Claude Code などのAIツール</dd>
+                </div>
+                <div>
+                    <dt>背景・課題</dt>
+                    <dd>個々の教室に掲載できる写真がほとんどないという構造的な制約がありました。「写真がない前提でどう見せるか」が設計課題となりました。</dd>
+                </div>
+                <div>
+                    <dt>取り組み</dt>
+                    <dd>競合調査（コエテコ・QUREO）で業界共通の課題だと検証。複数案を比較検討し、関係者との議論を経て、教室写真がない場合は汎用画像を採用する方針に着地しました。</dd>
+                </div>
+            </dl>
+
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>この案件で発揮していること</h2>
+
+        <div class="product_text">
+            <p style="margin-bottom: 1.5em;">
+                同一案件を通じて、次の4領域を実践しています。
+            </p>
+            <ul>
+                <li>Figma：Auto Layout / Variants / Components / カラースタイル設計</li>
+                <li>情報設計：競合調査に基づく要件定義、複数案の比較検討</li>
+                <li>コミュニケーション：非デザイナーのステークホルダーへの提案・合意形成</li>
+                <li>アクセシビリティ：WCAG準拠のコントラスト設計</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>検討の幅 ― 複数案の比較と方針転換</h2>
+
+        <div class="product_text">
+            <p>
+                「写真がない」制約への対応として、画像なしのカード案を含む複数パターンをFigmaで検討しました。
+            </p>
+            <ul style="margin-top: 1em;">
+                <li>案A：プレフェクチャカラーブロック型（画像なし）― 県ごとのカラーブロックで識別性を持たせる案</li>
+                <li>案B：画像フレーム型 ― 写真がある教室・汎用画像を入れる教室の両方に対応できる構造</li>
+            </ul>
+            <p style="margin-top: 1em;">
+                関係者との議論を経て、教室写真がない場合は汎用画像を採用する方針に着地しました。画像なし案（プレフェクチャカラーブロック型）自体は見送りとなりましたが、制約に対して複数の可能性を出し、議論の土台をつくったことが合意形成につながっています。
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>デザインシステム ― コントラスト比を起点にしたカラートークン</h2>
+
+        <div class="product_text">
+            <p>
+                ブランドカラー <b>#FF6600</b> をベースに設計しました。ただし白文字と組み合わせるとコントラスト比が約2.9:1となり、AA基準（4.5:1）に届きません。そこで、ボタンなど文字と重なる要素には、より濃い <b>strong</b> トークン <b>#B35000</b>（白文字とのコントラスト比 約5.2:1）を用意して使い分けています。
+            </p>
+            <p style="margin-top: 1em;">
+                「ブランドカラーをそのまま使えない」場面を、感覚ではなくコントラスト比の数値で判断し、base と strong の2トークンに分けて解決しました。<span class="point">白文字 × #B35000 は約5.2:1でAA準拠。</span>
+            </p>
+        </div>
+        <div class="imgsContainer">
+            <ul class="product_img">
+                <li style="width:100%; max-width:400px;">
+                    <img src="imgs/machi2_color.png" alt="カラートークン一覧（テーマカラー・エリアカラー）（Figma）" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>コンポーネント・バリアント設計</h2>
+
+        <div class="product_text">
+            <p>
+                教室カードを、4県（愛知・岐阜・三重・長野）× 画像あり／なしのバリアント構造で設計しました。1つのコンポーネントで組み合わせを管理し、Auto Layout で余白やサイズの一貫性を保っています。
+            </p>
+            <p style="margin-top: 1em;">
+                Auto Layout では、子要素のサイズ設定（Fill / Hug / Fixed）の指定順序でレイアウトが崩れて詰まった経験がありました。親から子へ、サイズの依存関係を意識して設定する順序を理解したことで解決。ツールの挙動を「なぜそうなるか」で理解する習慣がつきました。
+            </p>
+        </div>
+        <div class="imgsContainer">
+            <ul class="product_img">
+                <li style="width:100%; max-width:660px;">
+                    <img src="imgs/machi3_components.png" alt="コンポーネント一覧（ヘッダー・見出し・投稿リスト・カード・フッター）（Figma）" />
+                </li>
+                <li style="width:100%; max-width:660px; margin-top:2em;">
+                    <img src="imgs/machi1_card_design.png" alt="教室カードのバリアント一覧（4県 × 画像あり／なし）（Figma）" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>ステークホルダー協働 ― 複数案での合意形成</h2>
+
+        <div class="product_text">
+            <p>
+                複数案（A / B / C）を「叩き台」として提示する進め方をとりました。
+            </p>
+            <p style="margin-top: 1em;">
+                完成品ではなく議論の出発点として提示することで、フィードバックを引き出し、制約や優先順位を関係者と共有。議論を経て、写真がない場合は汎用画像を採用するという方針に着地しました。決定の背景を共有することで、その後の実装判断もぶれにくくなります。
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>今後の予定</h2>
+
+        <div class="product_text">
+            <p>
+                現在も進行中のプロジェクトです。デザインシステムの整備と実装を並行して進めています。
+            </p>
+            <ul style="margin-top: 1em;">
+                <li>Figma Variables を用いたデザイントークンの体系化・デザインシステム構築</li>
+                <li>プロトタイプの作成と、遷移・インタラクションの検証</li>
+                <li>WordPress（Cocoon子テーマ）でのスタイルガイド整備と実装</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="other">
+            <h3>他にも見る</h3>
+
+            <div class="work_list">
+                <ul>
+                    <li class="work_smilezemi">
+                        <a href="smilezemi.html">
+                            <div class="work_image">
+                                <img src="works/smilezemi_top.jpg" alt="家庭用タブレット教育サービス みまもるネット" width="100%">
+                            </div>
+                            <div class="work_name">家庭用タブレット教育サービス</div>
+                            <div class="work_text">UI/UXデザイン<br>教材作成<br>HTMLメールデザイン/コーディング</div>
+                        </a>
+                    </li>
+                    <li class="work_pitajob">
+                        <a href="pitajob.html">
+                            <div class="work_image">
+                                <img src="works/pitajob_top.jpg" alt="転職サービス" width="100%">
+                            </div>
+                            <div class="work_name">転職サービス</div>
+                            <div class="work_text">UI改善<br>A/Bテスト</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__inner">
+            <p class="footer__role">UI/UX Designer · UI Engineer</p>
+            <p class="footer__copy">&copy; 2026</p>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.header_menu');
+        const menuLinks = document.querySelectorAll('.header_menu a');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
