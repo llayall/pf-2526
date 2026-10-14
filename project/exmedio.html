@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>株式会社エクスメディオ様 ご案内 - Aya Nagasawa Portfolio</title>
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+    <style>
+        /* ===== エクスメディオ様向け案内ページ専用（.exm 内にスコープ） ===== */
+        .exm {
+            --exm-paper: var(--paper, #fff);
+            --exm-line: var(--line, #e6e0d4);
+            --exm-soft: var(--ink-soft, #4a4a4a);
+            --exm-mute: var(--ink-mute, #6b6b6b);
+            --exm-accent: #0f7a5a;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 96px 16px 64px;
+            text-align: left;
+            font-family: var(--sans);
+        }
+        /* 既存ページと同じゴシック体に統一（既存CSSの明朝指定を打ち消す） */
+        .exm, .exm * { font-family: var(--sans); }
+        .exm h1, .exm h2, .exm h3 {
+            background: none;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .exm section { margin-bottom: 72px; }
+        .exm p { margin: 0 0 1em; }
+
+        /* イントロ */
+        .exm-intro__eyebrow {
+            display: inline-block;
+            font-size: 13px;
+            letter-spacing: .08em;
+            color: var(--exm-mute);
+            margin-bottom: 12px;
+        }
+        .exm-intro h1 {
+                        font-weight: 400;
+            font-size: clamp(26px, 4vw, 38px);
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+        .exm-intro__lead { font-size: 16px; max-width: 46em; }
+        .exm-intro__nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+        }
+        .exm-intro__nav a {
+            display: inline-block;
+            padding: 6px 14px;
+            border: 1px solid var(--exm-line);
+            border-radius: 999px;
+            background: var(--exm-paper);
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .exm-intro__nav a:hover,
+        .exm-intro__nav a:focus-visible { border-color: currentColor; }
+
+        /* セクション見出し */
+        .exm-h2 {
+                        font-weight: 400;
+            font-size: clamp(22px, 3vw, 28px);
+            margin-bottom: 8px !important;
+        }
+        .exm-h2 + .exm-note {
+            color: var(--exm-mute);
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        /* 大事にしていること */
+        .exm-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .exm-card {
+            background: var(--exm-paper);
+            border: 1px solid var(--exm-line);
+            border-radius: 14px;
+            padding: 24px;
+        }
+        .exm-card__num {
+                        font-size: 14px;
+            color: var(--exm-accent);
+            margin-bottom: 4px;
+        }
+        .exm-card h3 {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .exm-card p { font-size: 15px; color: var(--exm-soft); }
+        .exm-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0;
+        }
+        .exm-links a {
+            display: inline-block;
+            font-size: 13px;
+            padding: 2px 10px;
+            border-radius: 999px;
+            background: rgba(15, 122, 90, .1);
+            color: var(--exm-accent);
+            text-decoration: none;
+        }
+        .exm-links a:hover,
+        .exm-links a:focus-visible { text-decoration: underline; }
+
+        /* 必須要件の対応表 */
+        .exm-req { margin: 0; padding: 0; }
+        .exm-req > div {
+            display: grid;
+            grid-template-columns: minmax(180px, 1fr) 2fr;
+            gap: 8px 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--exm-line);
+        }
+        .exm-req > div:first-child { border-top: 1px solid var(--exm-line); }
+        .exm-req dt { font-weight: bold; }
+        .exm-req dd { margin: 0; }
+        .exm-req dd p { font-size: 15px; color: var(--exm-soft); margin-bottom: 0; }
+        .exm-req dd .exm-links { margin: 0 0 8px; }
+
+        /* ピックアップ作品 */
+        .exm-picks {
+            display: grid;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .exm-pick {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+        .exm-pick__img {
+            display: block;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--exm-line);
+            aspect-ratio: 16 / 10;
+            background: #ddd;
+        }
+        .exm-pick__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .exm-pick__meta { font-size: 13px; color: var(--exm-mute); margin-bottom: 4px; }
+        .exm-pick h3 { font-size: 20px; margin-bottom: 12px; }
+        .exm-pick h3 a { text-decoration: none; }
+        .exm-pick h3 a:hover,
+        .exm-pick h3 a:focus-visible { text-decoration: underline; }
+        .exm-pick ul.exm-points {
+            margin: 0 0 12px;
+            padding-left: 1.2em;
+            font-size: 15px;
+            color: var(--exm-soft);
+        }
+        .exm-pick ul.exm-points li { margin-bottom: 4px; }
+        .exm-more { font-size: 14px; font-weight: bold; }
+
+        /* コミュニケーションデザイン */
+        .exm-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .exm-gallery a { display: block; text-decoration: none; }
+        .exm-gallery figure { margin: 0; }
+        .exm-gallery img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            border: 1px solid var(--exm-line);
+            display: block;
+        }
+        .exm-gallery figcaption { font-size: 14px; margin-top: 8px; line-height: 1.5; }
+        .exm-gallery figcaption span { display: block; font-size: 12px; color: var(--exm-mute); }
+        .exm-gallery a:hover figcaption,
+        .exm-gallery a:focus-visible figcaption { text-decoration: underline; }
+
+        /* AI・スキル */
+        .exm-two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .exm-skill { margin: 0; padding: 0; }
+        .exm-skill div { padding: 8px 0; border-bottom: 1px dashed var(--exm-line); }
+        .exm-skill div:last-child { border-bottom: 0; }
+        .exm-skill dt { font-weight: bold; font-size: 14px; }
+        .exm-skill dd { margin: 0; font-size: 14px; color: var(--exm-soft); }
+
+        /* フッター前の導線 */
+        .exm-cta {
+            text-align: center;
+            padding: 40px 16px;
+            border-top: 1px solid var(--exm-line);
+        }
+        .exm-cta a.exm-btn {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            border: 1px solid currentColor;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 720px) {
+            .exm { padding-top: 80px; }
+            .exm-req > div { grid-template-columns: 1fr; }
+            .exm-pick { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .exm {
+                --exm-paper: #2a2725;
+                --exm-line: #3d3935;
+                --exm-soft: #d6d0ca;
+                --exm-mute: #aaa29a;
+                --exm-accent: #6fd3ae;
+            }
+            .exm h1, .exm h2, .exm h3 { background: none; }
+            /* 既存CSSの文字色指定を上書き */
+            .exm, .exm p, .exm dt, .exm dd, .exm li, .exm h1, .exm h2, .exm h3,
+            .exm figcaption, .exm a, .exm-pick h3 a, .exm-more, .exm-cta a.exm-btn {
+                color: #f0ece8;
+            }
+            .exm .exm-card p, .exm .exm-req dd p, .exm .exm-pick ul.exm-points,
+            .exm .exm-pick ul.exm-points li, .exm .exm-skill dd { color: var(--exm-soft); }
+            .exm .exm-note, .exm .exm-intro__eyebrow, .exm .exm-pick__meta,
+            .exm .exm-gallery figcaption span { color: var(--exm-mute); }
+            .exm .exm-card__num, .exm .exm-links a { color: var(--exm-accent); }
+            .exm .exm-links a { background: rgba(111, 211, 174, .14); }
+        }
+    </style>
+</head>
+
+<body id="works" class="exmedio">
+
+    <div class="header">
+        <div class="logo">
+            <a href="home.html#top">
+                <picture>
+                    <source srcset="imgs/logo_dark.png" media="(prefers-color-scheme: dark)" />
+                    <img src="imgs/logo.png" width="32" height="32" alt="ポートフォリオサイトのロゴ・トップへ遷移" />
+                </picture>
+                <span class="logo__text">Aya Nagasawa's Portfolio</span>
+            </a>
+        </div>
+        <div class="header_nav">
+            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header_menu">
+                <li><a href="home.html#top">Home</a></li>
+                <li><a href="home.html#works">Works</a></li>
+                <li><a href="home.html#about">About</a></li>
+            </ul>
+            <a href="contact.html" class="header__contact" target="_blank" rel="noopener noreferrer"
+                aria-label="お問合せフォームを開く（新しいタブで開きます）">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M3 7l9 6 9-6"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <main class="exm">
+
+        <!-- ===== イントロ ===== -->
+        <section class="exm-intro" aria-labelledby="exm-title">
+            <p class="exm-intro__eyebrow">株式会社エクスメディオ様 ご案内</p>
+            <h1 id="exm-title">使う人の幅を広げる情報設計を、<br>実装まで責任をもって届けます。</h1>
+            <p class="exm-intro__lead">
+                長澤 彩です。BtoBの業務システムからBtoCの会員制サービスまで、約20年にわたり情報設計・UIデザイン・UI実装に携わってきました。
+                医療現場の業務システム（医事会計システム）のUI改善にも関わった経験があります。
+                このページでは、募集要項に沿って特にご覧いただきたい作品と、仕事で大事にしている考え方をまとめました。
+            </p>
+            <ul class="exm-intro__nav" aria-label="このページの目次">
+                <li><a href="#values">大事にしていること</a></li>
+                <li><a href="#requirements">募集要項と対応する作品</a></li>
+                <li><a href="#picks">特にご覧いただきたい作品</a></li>
+                <li><a href="#communication">コミュニケーションデザイン</a></li>
+                <li><a href="#ai">AIとスキル</a></li>
+            </ul>
+        </section>
+
+        <!-- ===== 大事にしていること ===== -->
+        <section id="values" aria-labelledby="values-title">
+            <h2 class="exm-h2" id="values-title">大事にしていること</h2>
+            <p class="exm-note">これまでの仕事の中で、繰り返し立ち返ってきた3つの考え方です。</p>
+            <ul class="exm-values">
+                <li class="exm-card">
+                    <p class="exm-card__num">01</p>
+                    <h3>使う人の幅を広げる</h3>
+                    <p>
+                        長年使い込んだ熟練者にも、はじめて触れる人にも使えるUIを目指しています。
+                        サーバー監視システムでは従来のUIと新しいUIを切り替えられる設計に、医事会計システムでは従来の操作方法とキーボード＋マウス操作の両方に対応する設計にしました。
+                        アクセシビリティの推進も、同じ考えの延長にあります。
+                    </p>
+                    <ul class="exm-links" aria-label="関連する作品">
+                        <li><a href="serverview.html">サーバー監視システム</a></li>
+                        <li><a href="medical.html">医事会計システム</a></li>
+                        <li><a href="ysearch.html">Yahoo!検索（アクセシビリティ）</a></li>
+                    </ul>
+                </li>
+                <li class="exm-card">
+                    <p class="exm-card__num">02</p>
+                    <h3>現場を見てから描く</h3>
+                    <p>
+                        データセンターや交通管制センターに足を運び、実際の作業を観察し、作業者の話を聞いてからUIを考えてきました。
+                        画面の前に座る人が、どんな状況で何に困っているのかを知ることが、設計の出発点だと考えています。
+                    </p>
+                    <ul class="exm-links" aria-label="関連する作品">
+                        <li><a href="serverview.html">サーバー監視システム</a></li>
+                        <li><a href="traffic.html">交通管制システム</a></li>
+                    </ul>
+                </li>
+                <li class="exm-card">
+                    <p class="exm-card__num">03</p>
+                    <h3>デザインと実装をつなぐ</h3>
+                    <p>
+                        デザインは、実装されてユーザーに届いて初めて価値になります。
+                        HTML/CSSでのモック実装から、React/TypeScriptでの本番実装、FigmaからWordPressまで一人で担当する制作まで、実装を見通した設計を続けてきました。
+                    </p>
+                    <ul class="exm-links" aria-label="関連する作品">
+                        <li><a href="machi.html">地域情報サイト</a></li>
+                        <li><a href="sprint.html">Sprint</a></li>
+                        <li><a href="ysearch.html">Yahoo!検索</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== 募集要項と対応する作品 ===== -->
+        <section id="requirements" aria-labelledby="req-title">
+            <h2 class="exm-h2" id="req-title">募集要項と対応する作品</h2>
+            <p class="exm-note">必須要件ごとに、関連する作品をまとめました。</p>
+            <dl class="exm-req">
+                <div>
+                    <dt>会員制Webサービスの<br>体験設計・継続的な改善</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="smilezemi.html">スマイルゼミ（保護者向けサイト）</a></li>
+                            <li><a href="pitajob.html">ピタジョブ</a></li>
+                            <li><a href="sprint.html">Sprint</a></li>
+                            <li><a href="jms.html">Just MyShop</a></li>
+                        </ul>
+                        <p>
+                            保護者が学習状況を確認するサイトの企画〜実装、転職サービスの運用改善（約1年）、企業向けインタビューサービスの約50画面の設計など、ログインして継続的に使われるサービスに関わってきました。Just MyShopでは会員登録・ログイン関連の約40画面の実装を担当しました。
+                        </p>
+                    </dd>
+                </div>
+                <div>
+                    <dt>UXデザイン実務<br>（調査・インタビュー・改善提案）</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="serverview.html">サーバー監視システム</a></li>
+                            <li><a href="traffic.html">交通管制システム</a></li>
+                            <li><a href="pitajob.html">ピタジョブ</a></li>
+                        </ul>
+                        <p>
+                            現場観察と作業者への簡易インタビューを踏まえたUI設計・提案に加え、ピタジョブではアクセス分析をもとにしたUI改善とA/Bテスト、メルマガ改善（開封率・クリック率の向上）を行いました。
+                        </p>
+                    </dd>
+                </div>
+                <div>
+                    <dt>情報設計からUI実装まで一貫して担当</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="machi.html">地域情報サイト</a></li>
+                            <li><a href="sprint.html">Sprint</a></li>
+                            <li><a href="smilezemi.html">スマイルゼミ</a></li>
+                        </ul>
+                        <p>
+                            地域情報サイトでは、Figmaでの情報設計・UI設計からWordPress実装までを一人で担当しています（進行中）。
+                        </p>
+                    </dd>
+                </div>
+                <div>
+                    <dt>Figma・Photoshop・Illustrator</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="machi.html">地域情報サイト（Figma）</a></li>
+                        </ul>
+                        <p>
+                            Figmaは地域情報サイトで、Auto Layout・Components・Variantsを使ったUI設計とカラースタイル設計を実践しています。Photoshop・Illustratorは、これまでのWeb制作・資料制作で継続的に使ってきました。
+                        </p>
+                    </dd>
+                </div>
+                <div>
+                    <dt>チラシ・リーフレットなどのDTP</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="sprint.html">Sprint（営業資料・A4チラシ）</a></li>
+                        </ul>
+                        <p>
+                            営業資料のスライドデザインとA4チラシを、実際にお客様先に伺うメンバーと相談しながら制作しました。下の「コミュニケーションデザイン」もあわせてご覧ください。
+                        </p>
+                    </dd>
+                </div>
+                <div>
+                    <dt>医療ドメイン</dt>
+                    <dd>
+                        <ul class="exm-links">
+                            <li><a href="medical.html">医事会計システム</a></li>
+                        </ul>
+                        <p>
+                            医療事務スタッフが使う業務システムのUI改善です。病院の担当者と直接やりとりする営業SEと、改善方針を詰めながら進めました。
+                        </p>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- ===== 特にご覧いただきたい作品 ===== -->
+        <section id="picks" aria-labelledby="picks-title">
+            <h2 class="exm-h2" id="picks-title">特にご覧いただきたい作品</h2>
+            <p class="exm-note">ヒポクラのように、経験や習熟度の異なるユーザーが同じサービスを使う場面に近い3作品です。</p>
+            <ul class="exm-picks">
+                <li class="exm-card exm-pick">
+                    <a class="exm-pick__img" href="serverview.html" tabindex="-1" aria-hidden="true">
+                        <img src="works/rc_top.jpg" alt="" loading="lazy" />
+                    </a>
+                    <div>
+                        <p class="exm-pick__meta">Fujitsu Design ／ BtoB業務システム ／ 2009年度グッドデザイン賞</p>
+                        <h3><a href="serverview.html">サーバー監視システム</a></h3>
+                        <ul class="exm-points">
+                            <li>アイコン制作の依頼をきっかけに、自分からUI改善を提案したところから始まり、3バージョンにわたってUIを改善</li>
+                            <li>データセンターで現場観察と作業者への簡易インタビューを行い、上流工程から設計に参加</li>
+                            <li>従来のプロフェッショナルユーザーと、新たな一般ユーザーの両方が使えるよう、UIのモード切り替えを提案</li>
+                        </ul>
+                        <a class="exm-more" href="serverview.html">詳しく見る →</a>
+                    </div>
+                </li>
+                <li class="exm-card exm-pick">
+                    <a class="exm-pick__img" href="medical.html" tabindex="-1" aria-hidden="true">
+                        <img src="works/medical_top.jpg" alt="" loading="lazy" />
+                    </a>
+                    <div>
+                        <p class="exm-pick__meta">Fujitsu Design ／ 医療現場の業務システム</p>
+                        <h3><a href="medical.html">医事会計システム</a></h3>
+                        <ul class="exm-points">
+                            <li>長年継承されてきた医療システム特有の操作方法と、一般的なキーボード＋マウス操作の両立が課題</li>
+                            <li>熟練ユーザーと一般ユーザー、それぞれの操作モデルを整理したうえでUIを設計</li>
+                            <li>病院の担当者と直接会話する営業SEと、改善方針を詰めながら進行</li>
+                        </ul>
+                        <a class="exm-more" href="medical.html">詳しく見る →</a>
+                    </div>
+                </li>
+                <li class="exm-card exm-pick">
+                    <a class="exm-pick__img" href="machi.html" tabindex="-1" aria-hidden="true">
+                        <img src="imgs/machi0_hero.png" alt="" loading="lazy" />
+                    </a>
+                    <div>
+                        <p class="exm-pick__meta">個人での制作協力 ／ 地域情報サイト ／ 進行中</p>
+                        <h3><a href="machi.html">地域情報サイト</a></h3>
+                        <ul class="exm-points">
+                            <li>競合調査から「教室の写真がない」という業界共通の制約を確認し、画像なしのカード案を含めて複数パターンを検討</li>
+                            <li>A/B/C案を叩き台として提示し、デザイナーではない関係者と合意形成</li>
+                            <li>ブランドカラーをそのまま使えない場面を、コントラスト比の数値で判断して色を設計</li>
+                        </ul>
+                        <a class="exm-more" href="machi.html">詳しく見る →</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== コミュニケーションデザイン ===== -->
+        <section id="communication" aria-labelledby="comm-title">
+            <h2 class="exm-h2" id="comm-title">コミュニケーションデザイン</h2>
+            <p class="exm-note">UIだけでなく、販促Web・営業資料・チラシ・メールなど、サービスを届けるためのデザインも担当してきました。</p>
+            <ul class="exm-gallery">
+                <li>
+                    <a href="sprint.html">
+                        <figure>
+                            <img src="works/sprint_eigyo_1.jpg" alt="Sprint 営業資料のスライド" loading="lazy" />
+                            <figcaption>営業資料・A4チラシ<span>Sprint</span></figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="sprint.html">
+                        <figure>
+                            <img src="works/sprint_web_1_pc.jpg" alt="Sprint 販促WebサイトのPC版" loading="lazy" />
+                            <figcaption>販促Webサイト<span>Sprint</span></figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="sprint.html">
+                        <figure>
+                            <img src="works/sprint_movie_1.jpg" alt="Sprint プロモーション動画の絵コンテ" loading="lazy" />
+                            <figcaption>プロモーション動画のシナリオ・ディレクション<span>Sprint</span></figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="pitajob.html">
+                        <figure>
+                            <img src="works/pitajob_mail_pc.jpg" alt="ピタジョブ 求職者向けメルマガ" loading="lazy" />
+                            <figcaption>HTMLメール（メルマガ改善）<span>ピタジョブ</span></figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== AIとスキル ===== -->
+        <section id="ai" aria-labelledby="ai-title">
+            <h2 class="exm-h2" id="ai-title">AIとスキル</h2>
+            <p class="exm-note">AIは作業を速くする道具として使い、設計の判断は自分で行います。</p>
+            <div class="exm-two">
+                <div class="exm-card">
+                    <h3>AIとの付き合い方</h3>
+                    <!-- ※ 実際の使い方に合わせて調整してください -->
+                    <p>
+                        Claude Code・GitHub Copilot・ChatGPTなどを、コード補完・実装レビュー・ドキュメント作成・情報収集に日常的に使っています。
+                    </p>
+                    <p>
+                        一方で、「誰のための画面か」「何を優先して見せるか」「この色で読めるか」といった判断は、ユーザーの状況や数値をもとに自分で行い、AIの出力はたたき台として確認・調整してから使っています。
+                    </p>
+                </div>
+                <div class="exm-card">
+                    <h3>主なスキル</h3>
+                    <dl class="exm-skill">
+                        <div>
+                            <dt>デザイン</dt>
+                            <dd>Figma / Photoshop / Illustrator / Sketch</dd>
+                        </div>
+                        <div>
+                            <dt>実装</dt>
+                            <dd>HTML / CSS / SCSS / JavaScript / React / TypeScript / WordPress</dd>
+                        </div>
+                        <div>
+                            <dt>アクセシビリティ</dt>
+                            <dd>WCAG 2.1 / JIS X 8341-3:2016、スクリーンリーダー検証（アクセシビリティチーム3年、うち2年はリード）</dd>
+                        </div>
+                        <div>
+                            <dt>連携・管理</dt>
+                            <dd>JIRA / Confluence / Notion / Miro / Slack / Git・GitHub</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <div class="exm-cta">
+            <p>経歴や、その他の作品はポートフォリオのトップページからご覧いただけます。</p>
+            <a class="exm-btn" href="home.html#works">すべての作品を見る</a>
+            <a class="exm-btn" href="home.html#about">経歴を見る</a>
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <div class="footer__inner">
+            <p class="footer__name">長澤 彩 · Aya Nagasawa</p>
+            <p class="footer__role">UI/UX Designer · UI Engineer</p>
+            <div class="footer__links">
+                <a href="https://www.linkedin.com/in/aya-nagasawa" target="_blank" rel="noopener noreferrer"
+                    class="footer__link" aria-label="LinkedInプロフィールを見る（新しいタブで開きます）">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/llayall" target="_blank" rel="noopener noreferrer" class="footer__link"
+                    aria-label="GitHubプロフィールを見る（新しいタブで開きます）">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+            <p class="footer__copy">&copy; 2026 NAGASAWA</p>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.header_menu');
+        const menuLinks = document.querySelectorAll('.header_menu a');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
